@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Projet Charbon - test" company="TRANH201 et BINGF406" webLink="http://" view-date="2021-09-11" view-index="2" gantt-divider-location="300" resource-divider-location="300" version="3.0.3005" locale="en_BE">
+    <description>
+        <![CDATA[Le but de ce plan de projet est d'illustrer la planification]]>
+    </description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="157" order="0"/>
+        <field id="tpd4" name="Begin date" width="61" order="1"/>
+        <field id="tpd5" name="End date" width="61" order="2"/>
+        <option id="taskLabelUp" value="id"/>
+        <option id="taskLabelDown" value="length"/>
+        <option id="taskLabelLeft" value="taskDates"/>
+        <option id="taskLabelRight" value="resources"/>
+        <timeline>
+            <![CDATA[67]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#000000 #009933]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="209" order="0"/>
+        <field id="1" name="Default role" width="85" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2021" month="12" date="25" type="HOLIDAY"/>
+        <date year="2021" month="12" date="26" type="HOLIDAY"/>
+        <date year="2021" month="12" date="27" type="HOLIDAY"/>
+        <date year="2021" month="12" date="28" type="HOLIDAY"/>
+        <date year="2021" month="12" date="29" type="HOLIDAY"/>
+        <date year="2021" month="12" date="30" type="HOLIDAY"/>
+        <date year="2021" month="12" date="31" type="HOLIDAY"/>
+        <date year="2022" month="1" date="1" type="HOLIDAY"/>
+        <date year="2022" month="1" date="2" type="HOLIDAY"/>
+        <date year="2022" month="1" date="3" type="HOLIDAY"/>
+        <date year="2022" month="1" date="4" type="HOLIDAY"/>
+        <date year="2022" month="1" date="5" type="HOLIDAY"/>
+        <date year="2022" month="1" date="6" type="HOLIDAY"/>
+        <date year="2022" month="1" date="7" type="HOLIDAY"/>
+        <date year="2022" month="1" date="8" type="HOLIDAY"/>
+        <date year="2022" month="1" date="9" type="HOLIDAY"/>
+        <date year="2022" month="1" date="10" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="11" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="12" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="13" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="14" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="15" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="16" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="17" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="18" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="19" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="20" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="21" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="22" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="23" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="24" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="25" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="26" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="27" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="28" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="29" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="30" type="WORKING_DAY"/>
+        <date year="2022" month="1" date="31" type="HOLIDAY"/>
+        <date year="2022" month="2" date="1" type="HOLIDAY"/>
+        <date year="2022" month="2" date="2" type="HOLIDAY"/>
+        <date year="2022" month="2" date="3" type="HOLIDAY"/>
+        <date year="2022" month="2" date="4" type="HOLIDAY"/>
+        <date year="2022" month="2" date="5" type="HOLIDAY"/>
+        <date year="2022" month="2" date="6" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="32" name="Q1" color="#000000" meeting="false" start="2021-09-20" duration="32" complete="0" thirdDate="2021-09-20" thirdDate-constraint="0" expand="true">
+            <task id="19" name="Démarage" color="#8cb6ce" meeting="false" start="2021-09-20" duration="32" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+                <task id="20" name="Kickoff" color="#8cb6ce" meeting="true" start="2021-09-20" duration="0" complete="0" thirdDate="2021-10-14" thirdDate-constraint="0" expand="true">
+                    <depend id="21" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="21" name="Première rencontre d'équipe" color="#009933" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2021-09-27" duration="1" complete="1" thirdDate="2021-09-27" thirdDate-constraint="1" expand="true">
+                    <depend id="22" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="22" name="Rechercher la théorie" color="#8cb6ce" meeting="false" start="2021-09-28" duration="7" complete="0" thirdDate="2021-09-28" thirdDate-constraint="1" expand="true">
+                    <depend id="25" type="2" difference="0" hardness="Strong"/>
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                    <depend id="47" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="25" name="Modeliser le protocole" color="#8cb6ce" meeting="false" start="2021-10-05" duration="14" complete="0" thirdDate="2021-10-05" thirdDate-constraint="0" expand="true">
+                    <notes>
+                        <![CDATA[Quelles matrices essayer?
+Comment carboniser?
+Comment activer le charbon]]>
+                    </notes>
+                    <depend id="62" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="36" name="Choisir des matrices" color="#8cb6ce" meeting="false" start="2021-10-05" duration="5" complete="0" thirdDate="2021-10-05" thirdDate-constraint="0" expand="true">
+                    <depend id="39" type="2" difference="0" hardness="Strong"/>
+                    <depend id="49" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="39" name="Carboniser" color="#8cb6ce" meeting="false" start="2021-10-10" duration="6" complete="0" thirdDate="2021-10-10" thirdDate-constraint="0" expand="true">
+                    <depend id="54" type="2" difference="0" hardness="Strong"/>
+                    <depend id="59" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="59" name="Activer le charbon" color="#8cb6ce" meeting="false" start="2021-10-16" duration="6" complete="0" thirdDate="2021-10-16" thirdDate-constraint="0" expand="true">
+                    <depend id="62" type="2" difference="0" hardness="Strong"/>
+                    <depend id="75" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="62" name="Premiers charbons actifs à tester" color="#8cb6ce" meeting="true" start="2021-10-22" duration="0" complete="0" thirdDate="2021-09-26" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="44" name="Ecrire le rapport" color="#8cb6ce" meeting="false" start="2021-10-10" duration="15" complete="0" thirdDate="2021-09-23" thirdDate-constraint="0" expand="true">
+            <task id="47" name="Bibliograhie" color="#8cb6ce" meeting="false" start="2021-10-22" duration="3" complete="0" thirdDate="2021-09-23" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+                <task id="75" name="Documenter l'acivation du charbon" color="#8cb6ce" meeting="false" start="2021-10-22" duration="3" complete="0" thirdDate="2021-09-17" thirdDate-constraint="0" expand="true">
+                    <depend id="67" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="49" name="Documenter le choix de matrice" color="#8cb6ce" meeting="false" start="2021-10-10" duration="3" complete="0" thirdDate="2021-10-10" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="54" name="Documenter la carbonisation" color="#8cb6ce" meeting="false" start="2021-10-16" duration="3" complete="0" thirdDate="2021-10-16" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="67" name="Première version du rapport" color="#8cb6ce" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2021-10-25" duration="0" complete="0" thirdDate="2021-10-21" thirdDate-constraint="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Jean-Claude" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Marie-Edwige" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Wim-Jaap" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Jan-Piet" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Charles-Geoffrey" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Jeanne-Celeste" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="21" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="47" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="25" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="47" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="36" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="36" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="59" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="54" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="75" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="59" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="54" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="75" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

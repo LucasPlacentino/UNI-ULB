@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingVertical="4dp">
+
+    <ImageView
+        android:id="@+id/imagePanier"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:src="@drawable/car_giorgio_trovato_unsplash"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/namePanier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imagePanier"
+        app:layout_constraintTop_toBottomOf="@+id/pricePanier"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imagePanier"
+        tools:text="Produit" />
+
+    <TextView
+        android:id="@+id/pricePanier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@id/imagePanier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Prix" />
+
+    <!--
+    <ImageView
+        android:id="@+id/imagePanier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/giorgio_trovato_unsplash"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/namePanier"
+        tools:text="Produit"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/imagePanier"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pricePanier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/pricePanier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imagePanier"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Prix"
+        android:textSize="15sp"
+        android:gravity="center_horizontal" />
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

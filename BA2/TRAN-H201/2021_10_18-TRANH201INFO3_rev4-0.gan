@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="BA2-INFO3-2021" company="EPB-ULB" webLink="" view-date="2021-11-05" view-index="0" gantt-divider-location="346" resource-divider-location="300" version="3.1.3102" locale="en">
+    <description>
+        <![CDATA[Projet TRAN-H201 Informatique groupe 3 ]]>
+    </description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="169" order="0"/>
+        <field id="tpd4" name="Begin date" width="81" order="1"/>
+        <field id="tpd5" name="End date" width="77" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelDown" value="length"/>
+        <option id="taskLabelLeft" value="taskDates"/>
+        <option id="taskLabelRight" value="resources"/>
+        <timeline>
+            <![CDATA[48,323,211,261,197,286,23,225,311,87,234,195,201,74,397,163,375]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#ff9933 #ff6600 #3333ff #990099 #ff00ff #99ff99 #cc0066 #990066 #666666 #00ffff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="126" name="Gestion de Projet" color="#006666" meeting="false" start="2021-09-29" duration="28" complete="0" thirdDate="2021-09-23" thirdDate-constraint="1" expand="true">
+            <task id="215" name="Conférence Gantt" color="#009999" meeting="true" start="2021-09-29" duration="0" complete="0" thirdDate="2021-09-24" thirdDate-constraint="0" expand="true">
+                <depend id="56" type="2" difference="0" hardness="Strong"/>
+                <depend id="128" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="211" name="Conférence Status Reporting" color="#009999" meeting="true" start="2021-10-04" duration="0" complete="0" thirdDate="2021-09-26" thirdDate-constraint="0" expand="true">
+                <depend id="209" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="209" name="Status Report 1" color="#009999" meeting="false" start="2021-10-04" duration="3" complete="0" thirdDate="2021-10-02" thirdDate-constraint="0" expand="true">
+                <depend id="74" type="3" difference="0" hardness="Strong"/>
+                <depend id="241" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="241" name="Status Report 2" color="#009999" meeting="false" start="2021-10-07" duration="6" complete="0" thirdDate="2021-10-03" thirdDate-constraint="0" expand="true">
+                <depend id="163" type="3" difference="0" hardness="Strong"/>
+                <depend id="246" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="246" name="Status Report 3" color="#009999" meeting="false" start="2021-10-13" duration="7" complete="0" thirdDate="2021-10-06" thirdDate-constraint="0" expand="true">
+                <depend id="195" type="3" difference="0" hardness="Strong"/>
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="247" name="Status Report 4" color="#009999" meeting="false" start="2021-10-20" duration="7" complete="0" thirdDate="2021-10-06" thirdDate-constraint="0" expand="true">
+                <depend id="197" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="128" name="Création Gantt" color="#006633" meeting="false" start="2021-10-03" duration="8" complete="0" thirdDate="2021-10-03" thirdDate-constraint="1" expand="true">
+                <depend id="131" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="131" name="Séance planification de projet" color="#006666" meeting="true" start="2021-10-11" duration="0" complete="0" thirdDate="2021-10-02" thirdDate-constraint="0" expand="true">
+                <depend id="305" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="305" name="Révision Gantt" color="#006633" meeting="false" start="2021-10-11" duration="11" complete="0" thirdDate="2021-10-02" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="19" name="Q1" color="#000000" meeting="false" start="2021-09-20" duration="102" complete="0" thirdDate="2021-08-31" thirdDate-constraint="0" expand="true">
+            <task id="36" name="Débuts et premières recherches" color="#666666" meeting="false" start="2021-09-20" duration="32" complete="0" thirdDate="2021-09-20" thirdDate-constraint="0" expand="true">
+                <task id="8" name="Kickoff" color="#009900" meeting="true" start="2021-09-20" duration="0" complete="0" thirdDate="2021-09-13" thirdDate-constraint="0" expand="true">
+                    <depend id="23" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="23" name="Première réunion avec l'équipe" color="#990099" meeting="false" start="2021-09-23" duration="1" complete="0" thirdDate="2021-09-23" thirdDate-constraint="1" priority="2" expand="true">
+                    <depend id="40" type="2" difference="0" hardness="Strong"/>
+                    <depend id="126" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="40" name="Recherches individuelles" color="#66ffff" meeting="false" start="2021-09-24" duration="6" complete="0" thirdDate="2021-09-10" thirdDate-constraint="0" expand="true">
+                    <depend id="48" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="48" name="Réunion 2: mise en commun recherches" color="#990099" meeting="false" start="2021-09-30" duration="1" complete="0" thirdDate="2021-09-30" thirdDate-constraint="1" expand="true">
+                    <depend id="56" type="2" difference="0" hardness="Strong"/>
+                    <depend id="59" type="2" difference="0" hardness="Strong"/>
+                    <depend id="66" type="2" difference="0" hardness="Strong"/>
+                    <depend id="68" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="56" name="Réunion premier Gantt" color="#666600" meeting="false" start="2021-10-03" duration="1" complete="0" thirdDate="2021-10-03" thirdDate-constraint="1" expand="true">
+                    <depend id="128" type="1" difference="0" hardness="Strong"/>
+                </task>
+                <task id="59" name="Recherches mots-clés et DAC" color="#66ffff" meeting="false" start="2021-10-01" duration="6" complete="0" thirdDate="2021-09-24" thirdDate-constraint="0" expand="true">
+                    <depend id="74" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="66" name="Comparaison designs sequencer" color="#66ffff" meeting="false" start="2021-10-01" duration="6" complete="0" thirdDate="2021-09-24" thirdDate-constraint="0" expand="true">
+                    <depend id="59" type="3" difference="0" hardness="Strong"/>
+                    <depend id="74" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="68" name="Recherche autre design et choix matériaux et c composants" color="#66ffff" meeting="false" start="2021-10-01" duration="6" complete="0" thirdDate="2021-09-24" thirdDate-constraint="0" expand="true">
+                    <depend id="59" type="3" difference="0" hardness="Strong"/>
+                    <depend id="74" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="74" name="Réunion 3" color="#990099" meeting="false" start="2021-10-07" duration="1" complete="0" thirdDate="2021-10-07" thirdDate-constraint="1" expand="true">
+                    <depend id="87" type="2" difference="0" hardness="Strong"/>
+                    <depend id="145" type="2" difference="0" hardness="Strong"/>
+                    <depend id="149" type="2" difference="0" hardness="Strong"/>
+                    <depend id="154" type="2" difference="0" hardness="Strong"/>
+                    <depend id="158" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="261" name="Rapport de recherches documentaires" color="#ff3333" meeting="true" start="2021-10-22" duration="0" complete="0" thirdDate="2021-10-22" thirdDate-constraint="1" priority="4" expand="true"/>
+                <task id="264" name="Ecriture rapport de recherche documentaire" color="#00ffff" meeting="false" start="2021-10-15" duration="7" complete="0" thirdDate="2021-10-15" thirdDate-constraint="1" priority="2" expand="true">
+                    <depend id="195" type="3" difference="0" hardness="Strong"/>
+                    <depend id="261" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="79" name="Conception" color="#666666" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2021-10-08" duration="28" complete="0" thirdDate="2021-09-29" thirdDate-constraint="0" expand="true">
+                <task id="311" name="Rapport de Conception" color="#ff3333" meeting="true" start="2021-10-29" duration="0" complete="0" thirdDate="2021-10-29" thirdDate-constraint="1" priority="4" expand="true">
+                    <depend id="321" type="3" difference="0" hardness="Strong"/>
+                </task>
+                <task id="313" name="Ecriture rapport de conception" color="#ff00ff" meeting="false" start="2021-10-22" duration="7" complete="0" thirdDate="2021-10-22" thirdDate-constraint="0" expand="true">
+                    <depend id="197" type="3" difference="0" hardness="Strong"/>
+                    <depend id="311" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="87" name="Commande Raspberry Pi" color="#ff00ff" meeting="false" start="2021-10-08" duration="3" complete="0" thirdDate="2021-10-09" thirdDate-constraint="0" priority="2" expand="true"/>
+                <task id="145" name="Dimensionnement DAC, recherche 4 cents" color="#ff00ff" meeting="false" start="2021-10-08" duration="6" complete="0" thirdDate="2021-10-09" thirdDate-constraint="0" priority="2" expand="true">
+                    <depend id="163" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="149" name="Modèle/Schéma électronique sequencer" color="#ff00ff" meeting="false" start="2021-10-08" duration="6" complete="0" thirdDate="2021-10-09" thirdDate-constraint="0" expand="true">
+                    <depend id="163" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="154" name="Recherches librairies Python RPi" color="#ff00ff" meeting="false" start="2021-10-08" duration="6" complete="0" thirdDate="2021-10-09" thirdDate-constraint="0" expand="true">
+                    <depend id="163" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="158" name="Tableau choix RPi et écrans" color="#ff00ff" meeting="false" start="2021-10-08" duration="6" complete="0" thirdDate="2021-10-09" thirdDate-constraint="0" expand="true">
+                    <depend id="163" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="163" name="Réunion 4" color="#990099" meeting="false" start="2021-10-14" duration="1" complete="0" thirdDate="2021-10-14" thirdDate-constraint="1" expand="true">
+                    <depend id="228" type="2" difference="0" hardness="Strong"/>
+                    <depend id="235" type="2" difference="0" hardness="Strong"/>
+                    <depend id="264" type="2" difference="0" hardness="Strong"/>
+                    <depend id="280" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="280" name="Commande LCD+Breadboard+µSD+Alim" color="#ff33ff" meeting="false" start="2021-10-15" duration="6" complete="0" thirdDate="2021-10-06" thirdDate-constraint="0" expand="true">
+                    <depend id="195" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="195" name="Réunion 5" color="#990099" meeting="false" start="2021-10-21" duration="1" complete="0" thirdDate="2021-10-21" thirdDate-constraint="1" expand="true">
+                    <depend id="313" type="2" difference="0" hardness="Strong"/>
+                    <depend id="315" type="2" difference="0" hardness="Strong"/>
+                    <depend id="321" type="2" difference="0" hardness="Strong"/>
+                    <depend id="336" type="2" difference="0" hardness="Strong"/>
+                    <depend id="386" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="386" name="Commande DAC LED etc" color="#ff00ff" meeting="false" start="2021-10-22" duration="6" complete="0" thirdDate="2021-10-22" thirdDate-constraint="0" expand="true">
+                    <depend id="197" type="2" difference="0" hardness="Strong"/>
+                    <depend id="321" type="1" difference="0" hardness="Strong"/>
+                </task>
+                <task id="197" name="Réunion 6" color="#990099" meeting="false" start="2021-10-28" duration="1" complete="0" thirdDate="2021-10-28" thirdDate-constraint="1" expand="true">
+                    <depend id="391" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="391" name="tâche_391" color="#ff00ff" meeting="false" start="2021-10-29" duration="6" complete="0" thirdDate="2021-10-29" thirdDate-constraint="0" expand="true">
+                    <depend id="323" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="323" name="Réunion 7" color="#990099" meeting="false" start="2021-11-04" duration="1" complete="0" thirdDate="2021-11-04" thirdDate-constraint="1" expand="true">
+                    <depend id="201" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="199" name="Prototypage" color="#666666" meeting="false" start="2021-11-05" duration="45" complete="0" thirdDate="2021-10-19" thirdDate-constraint="0" expand="true">
+                <task id="201" name="Premier circuit test" color="#3333ff" meeting="false" start="2021-11-05" duration="6" complete="0" thirdDate="2021-10-19" thirdDate-constraint="0" expand="true">
+                    <depend id="375" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="375" name="Réunion 8" color="#990099" meeting="false" start="2021-11-11" duration="1" complete="0" thirdDate="2021-11-11" thirdDate-constraint="1" expand="true">
+                    <depend id="394" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="394" name="Design boitier et envoi pour la découpe" color="#3333ff" meeting="false" start="2021-11-12" duration="6" complete="0" thirdDate="2021-11-12" thirdDate-constraint="0" expand="true">
+                    <depend id="397" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="397" name="Réunion 9" color="#990099" meeting="false" start="2021-11-18" duration="1" complete="0" thirdDate="2021-11-18" thirdDate-constraint="0" expand="true">
+                    <depend id="400" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="400" name="Assemblage boitier et composants" color="#3333ff" meeting="false" start="2021-11-19" duration="6" complete="0" thirdDate="2021-11-19" thirdDate-constraint="0" expand="true"/>
+                <task id="234" name="Eval Mi-Parcours" color="#ff3333" meeting="true" start="2021-12-20" duration="0" complete="0" thirdDate="2021-12-20" thirdDate-constraint="1" priority="4" expand="true">
+                    <depend id="20" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="314" name="Codage" color="#666666" meeting="false" start="2021-10-22" duration="36" complete="0" thirdDate="2021-10-18" thirdDate-constraint="0" expand="true">
+                <task id="315" name="Début code" color="#99ff99" meeting="false" start="2021-10-22" duration="6" complete="0" thirdDate="2021-10-18" thirdDate-constraint="0" expand="true">
+                    <depend id="197" type="2" difference="0" hardness="Strong"/>
+                    <depend id="345" type="2" difference="0" hardness="Strong"/>
+                    <depend id="355" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="336" name="Sélection librairies" color="#99ff99" meeting="false" start="2021-10-22" duration="6" complete="0" thirdDate="2021-10-15" thirdDate-constraint="0" expand="true">
+                    <depend id="315" type="3" difference="0" hardness="Strong"/>
+                </task>
+                <task id="345" name="Code LCD" color="#99ff99" meeting="false" start="2021-10-28" duration="6" complete="0" thirdDate="2021-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="347" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="347" name="Code DAC" color="#99ff99" meeting="false" start="2021-11-03" duration="6" complete="0" thirdDate="2021-11-03" thirdDate-constraint="0" expand="true">
+                    <depend id="349" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="349" name="Code Rotary Encoders" color="#99ff99" meeting="false" start="2021-11-09" duration="6" complete="0" thirdDate="2021-11-09" thirdDate-constraint="0" expand="true">
+                    <depend id="351" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="351" name="Code LEDs" color="#99ff99" meeting="false" start="2021-11-15" duration="6" complete="0" thirdDate="2021-11-15" thirdDate-constraint="0" expand="true">
+                    <depend id="353" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="353" name="Code Bouton Silence" color="#99ff99" meeting="false" start="2021-11-21" duration="6" complete="0" thirdDate="2021-11-01" thirdDate-constraint="0" expand="true"/>
+                <task id="355" name="Code backend, calculs CV etc" color="#99ff99" meeting="false" start="2021-10-28" duration="30" complete="0" thirdDate="2021-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="353" type="3" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="228" name="Ecriture Rapport" color="#cccccc" meeting="false" start="2021-10-15" duration="59" complete="0" thirdDate="2021-10-15" thirdDate-constraint="1" priority="2" expand="true">
+                <task id="235" name="Début écriture Rapport" color="#ff9933" meeting="false" start="2021-10-15" duration="6" complete="0" thirdDate="2021-10-21" thirdDate-constraint="0" expand="true">
+                    <depend id="195" type="2" difference="0" hardness="Strong"/>
+                    <depend id="321" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="321" name="Comparaisons, choix (tableaux)" color="#ff9933" meeting="false" start="2021-10-22" duration="7" complete="0" thirdDate="2021-10-21" thirdDate-constraint="0" expand="true">
+                    <depend id="403" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="403" name="Bonne subdivision en chapitres" color="#ff9933" meeting="false" start="2021-10-29" duration="6" complete="0" thirdDate="2021-10-29" thirdDate-constraint="0" expand="true">
+                    <depend id="407" type="2" difference="0" hardness="Strong"/>
+                    <depend id="408" type="2" difference="0" hardness="Strong"/>
+                    <depend id="409" type="2" difference="0" hardness="Strong"/>
+                    <depend id="410" type="2" difference="0" hardness="Strong"/>
+                    <depend id="411" type="2" difference="0" hardness="Strong"/>
+                    <depend id="412" type="2" difference="0" hardness="Strong"/>
+                    <depend id="431" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="407" name="Abstract" color="#ff9933" meeting="false" start="2021-11-04" duration="21" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true">
+                    <depend id="412" type="3" difference="0" hardness="Strong"/>
+                </task>
+                <task id="408" name="Introduction" color="#ff9933" meeting="false" start="2021-11-04" duration="7" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="409" name="Chap 1" color="#ff9933" meeting="false" start="2021-11-04" duration="14" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="410" name="Chap 2" color="#ff9933" meeting="false" start="2021-11-04" duration="14" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="431" name="Chap 3" color="#ff9933" meeting="false" start="2021-11-04" duration="14" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="412" name="Conclusion" color="#ff9933" meeting="false" start="2021-11-19" duration="6" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="411" name="Bibliographie" color="#ff6600" meeting="false" start="2021-11-04" duration="21" complete="0" thirdDate="2021-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="225" name="Remise Rapport Mi-Parcours" color="#ff3333" meeting="true" start="2021-12-13" duration="0" complete="0" thirdDate="2021-12-13" thirdDate-constraint="1" priority="4" expand="true"/>
+            </task>
+            <task id="34" name="Fin Q1" color="#660000" meeting="true" start="2021-12-31" duration="0" complete="0" thirdDate="2021-12-31" thirdDate-constraint="1" expand="true"/>
+        </task>
+        <task id="97" name="Blocus et vacances Q1" color="#cccccc" shape="1,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0" meeting="false" start="2021-12-31" duration="31" complete="0" thirdDate="2021-12-31" thirdDate-constraint="1" expand="true"/>
+        <task id="11" name="Q2" color="#000000" shape="0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0" meeting="false" start="2022-01-31" duration="49" complete="0" thirdDate="2022-01-31" thirdDate-constraint="1" expand="true">
+            <task id="20" name="Rentrée" color="#009900" meeting="true" start="2022-01-31" duration="0" complete="0" thirdDate="2022-01-31" thirdDate-constraint="1" expand="true"/>
+            <task id="286" name="Evaluation finale" color="#ff3333" meeting="true" start="2022-03-21" duration="0" complete="0" thirdDate="2022-03-21" thirdDate-constraint="1" priority="4" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Lucas" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Robin" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Felix" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Kamil" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="23" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="68" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="128" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="158" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="264" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="305" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="313" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="68" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="145" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="264" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="313" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="66" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="154" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="264" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="313" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="59" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="149" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="264" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="313" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
