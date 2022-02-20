@@ -1,0 +1,39 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Get APK Release and release it in this repo
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  get-asset:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: 🔃 Checkout the code
+        uses: actions/checkout@v2
+
+      - name: ⤵️ Get Release APK
+        uses: dsaltares/fetch-gh-release-asset@0.0.7
+        with:
+          repo: lucasplacentino/App-BA2-Project-Ecommerce
+          file: app-release-unsigned.apk
+          target: BA2/INFOH2001/app/release/app-release-unsigned.apk
+          #token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 📦 Release APK
+        id: release-apk
+        uses: softprops/action-gh-release@v1
+        with:
+          files: BA2/INFOH2001/app/release/app-release-unsigned.apk
+          draft: false
+          prerelease: false
+          name: Release-${{ github.run_id }}.${{ github.run_attempt }}
+          tag_name: ${{ github.run_id }}.${{ github.run_attempt }}-${{ github.ref }}
