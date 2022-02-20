@@ -5,7 +5,9 @@ name: Get APK Release and release it in this repo
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
-  [workflow_dispatch, repository_dispatch]
+  - workflow_dispatch
+  - repository_dispatch:
+    types: [released-asset]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -47,4 +49,4 @@ jobs:
           prerelease: false
           name: App BA2 Project Release-${{ github.run_id }}.${{ github.run_attempt }}
           tag_name: ${{ github.run_id }}.${{ github.run_attempt }}-${{ github.ref }}
-          body: "see https://github.com/lucasplacentino/App-BA2-Project-Ecommerce/"
+          body: See ${{ github.event.client_payload.repourl }}
