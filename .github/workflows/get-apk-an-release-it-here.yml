@@ -28,6 +28,8 @@ jobs:
           target: BA2/INFOH2001/app/release/app-release-unsigned.apk
           #token: ${{ secrets.GITHUB_TOKEN }}
           
+      - run: chown -R 1001:1001 /BA2/INFOH2001/app/release/app-release-unsigned.apk
+          
       - name: 📦 Release APK
         id: release-apk
         uses: softprops/action-gh-release@v1
