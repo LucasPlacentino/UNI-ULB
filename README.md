@@ -15,4 +15,4 @@ Programmation etc
 - ### Projet BA2 INFO-H2001 - https://github.com/lucasplacentino/App-BA2-Project-Ecommerce  
 - ### Projet BA2 TRAN-H201 - https://github.com/lucasplacentino/TRANH201INFO3-Sequencer  
 - ### Cours Analyse Numérique MATH-H202  
-  Octave (Matlab)  
+  Octave (Matlab) - http://metronu.ulb.ac.be/MATH-H-202/  
