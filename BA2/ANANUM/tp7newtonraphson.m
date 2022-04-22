@@ -2,7 +2,8 @@
 
 function [n, sol] = tp7newtonraphson(f, fprime, x0)
   n = 0;
-  x = x0 - f(x0)/fprime(x0);
+  %x = x0 - f(x0)/fprime(x0); % si scalaire
+  x = x0 - fprime(x0)\f(x0); % pour vectoriel ET scalaire
   #while (fprime(x) > 10^(-4)) & (fprime(x) < -10^(-4)) & n < 50
   while n < 69
     n++;
