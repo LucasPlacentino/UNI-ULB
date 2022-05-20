@@ -79,6 +79,7 @@ y = tp12func(m, a, b, f, cl) #de manière générale, pour tout m et intervalle
 plot(a:h:b, y, '-r*')
 hold on
 
+# ! il faut augm le nbr de point de la sol exacte sinon bah l'erreur ne chnage pas avec m qui change
 yexact(1)=yx(a);
 for i=1:1:m-1 # le pas = 1?????
   yexact=[yexact ; yx(a+h*i)];
