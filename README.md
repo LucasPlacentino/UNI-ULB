@@ -18,5 +18,7 @@ Ecole Polytechnique de Bruxelles**
   Sequencer for analog modular synth, built with Python on a RaspberryPi 3  
 - ### Course : Analyse Numérique - MATH-H202  
   Octave (Matlab) - http://metronu.ulb.ac.be/MATH-H-202/  
+  
+## BA3
 - ### Course : Épistémologie des sciences et Éthique de l'ingénieur - TRANH3001  
   (Notes .md)  
