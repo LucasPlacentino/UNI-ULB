@@ -1,24 +1,30 @@
-# UNI-ULB
-University files and projects  
+# UNI-ULB_edu
+Personal university files, documents and projects.  
 
-Lucas Placentino  
-**ULB  
-Ecole Polytechnique de Bruxelles**  
+### [Lucas Placentino](https://github.com/LucasPlacentino)  
+**ULB - https://ulb.ac.be/en  
+École Polytechnique de Bruxelles - https://polytech.ulb.be/en**  
 
 ## BA1
-- ### Project cs : Informatique I - INFO-H100  
+- ### <a href='BA1/INFOH100'><ins>↪️ Project cs : Informatique I</ins></a> - INFO-H100  
   Vasarely mathematical painting using turtle module, in Python  
-- ### Project BA1 : Projet d'année TRANH101  
+- ### <a href='BA1/TRANH201'><ins>↪️ Project BA1 : Projet d'année</ins></a> - TRANH101  
   _**..---..TBA..---..**_  
 
 ## BA2
-- ### Project cs : Informatique II - INFO-H2001 - https://github.com/lucasplacentino/App-BA2-Project-Ecommerce  
+- ### <a href='BA2/INFOH2001'><ins>↪️ Project cs : Informatique II</ins></a> - INFO-H2001  
+  > <i>https://github.com/lucasplacentino/App-BA2-Project-Ecommerce</i>
+  
   E-Commerce app built in Kotlin for Android  
-- ### Project BA2 : Projet d'année - TRAN-H201 - https://github.com/lucasplacentino/TRANH201INFO3-Sequencer  
+- ### <a href='BA2/TRANH201'><ins>↪️ Project BA2 : Projet d'année</ins></a> - TRAN-H201  
+  > <i>https://github.com/lucasplacentino/TRANH201INFO3-Sequencer</i>
+  
   Sequencer for analog modular synth, built with Python on a RaspberryPi 3  
-- ### Course : Analyse Numérique - MATH-H202  
-  Octave (Matlab) - http://metronu.ulb.ac.be/MATH-H-202/  
+- ### <a href='BA2/ANANUM'><ins>↪️ Course : Analyse Numérique</ins></a> - MATH-H202  
+  > <i>http://metronu.ulb.ac.be/MATH-H-202/</i>
+  
+  Octave (Matlab)  
   
 ## BA3
-- ### Course : Épistémologie des sciences et Éthique de l'ingénieur - TRANH3001  
+- ### <a href='BA3/TRANH3001'><ins>↪️ Course : Épistémologie des sciences et Éthique de l'ingénieur</ins></a> - TRANH3001  
   (Notes .md)  
