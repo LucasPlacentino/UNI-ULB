@@ -28,3 +28,5 @@ Personal university files, documents and projects.
 ## BA3
 - ### <a href='BA3/TRANH3001'><ins>↪️ Course : Épistémologie des sciences et Éthique de l'ingénieur</ins></a> - TRANH3001  
   (Notes .md)  
+- ### <a href='BA3/ELEC-H305'><ins>↪️ Course : Circuits logiques et numériques</ins></a> - ELEC-H305  
+  Also C programming language (.c files, etc)
