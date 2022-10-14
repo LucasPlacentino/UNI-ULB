@@ -1,0 +1,11 @@
+{
+  "showLineNumber": true,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "fr",
+    "en-GB",
+    "en-US"
+  ],
+  "showUnsupportedFiles": true,
+  "readableLineLength": false
+}
