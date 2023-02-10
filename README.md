@@ -30,3 +30,6 @@ Personal university files, documents and projects.
   (Notes .md)  
 - ### <a href='BA3/ELEC-H305'><ins>↪️ Course : Circuits logiques et numériques</ins></a> - ELEC-H305  
   Also C programming language (.c files, etc)
+- ### <a href='https://github.com/lucasplacentino/Project-ELECH309.X'><ins>↪️ Projet Intégré</ins></a> - ELEC-H309  
+  > <i>https://github.com/lucasplacentino/Project-ELECH309.X</i>
+  
