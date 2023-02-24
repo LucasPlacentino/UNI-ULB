@@ -54,7 +54,7 @@ errRelA3 = condA3 * u # 1.1029e-16
 A1;
 LfoisU1 = L*U;
 x1 = U\(L\b1)
-norm(x1-ones(5,1)/sqrt(5))
+norm(x1-ones(5,1))/sqrt(5)
 errRelA1
 #ici errRelA1 > donc correct
 
@@ -62,7 +62,7 @@ errRelA1
 A2;
 LfoisU2 = L*U;
 x2 = U\(L\b2)
-norm(x2-[-1;-1;-1;-1;-1]/sqrt(5))
+norm(x2-[-1;-1;-1;-1;-1])/sqrt(5)
 errRelA2
 #ici errRelA2 > donc correct
 
@@ -70,7 +70,7 @@ errRelA2
 A3;
 LfoisU3 = L*U;
 x3 = U\(L\b3)
-norm(x3-[-1;-1;-1;-1;-1]/sqrt(5))
+norm(x3-[-1;-1;-1;-1;-1])/sqrt(5)
 errRelA3
 #ici errRelA3 < donc il faut passer à l'ex 3 pour calculer avec PA=LU
 
