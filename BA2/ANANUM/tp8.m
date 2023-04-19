@@ -1,4 +1,5 @@
 % TP8
+clear all;
 
 % appliquer Newton-Raphson à une focntion vecorielle
 % fct vectorielles:
@@ -20,27 +21,34 @@
 
 
 %fct du b)
-F=@(x) [x(1)^2-x(2)-1; (x(1)-2)^2+(x(2)-0.5)^2-1]
+F=@(x) [x(1).^2-x(2)-1; (x(1)-2).^2+(x(2)-0.5).^2-1]
 
 %x = -2:0.1:2
 x = linspace(0, 2, 300);
 y = linspace(0, 2, 300);
 
+# plutot que de chercher l'intersection de deux surfaces, on va regarder la norme d'un vecteur, et trouver sa racine dans un mesh
 for i=1:size(x,2)
   for j=1:size(y,2)
-    z(i,j)=norm(F([x(i),y(j)]));
+    z(i,j)=min(norm(F([x(i),y(j)])),0.5); % Le min est juste pour que ce soit plus clair sur le mesh. Attention parentheses, une erreur est vite arrivee
   endfor
 endfor
 mesh(x, y, z) % (set(gca,'Zlim',[-1,1]) dans command window)
+xlabel('x'); ylabel('y'); zlabel('z')
+legend('z=norm')
 
 % on peut voir une racine en x=0.2, y=1.1
 % et l'autre en x=1.5, y=1.6
 
-
 % c)
 
 %jacobienne Fp
-Fp=@(x) [2*x(1), -1; 2*x(1)-4, 2*x(2)-1];
-x0 = [1.5; 1.6];
-%x0 = [0.2; 1.1];
-[n_nr , sol_nr] = tp7newtonraphson( F, Fp, x0)
+#   [df1/dx1 , df1/dx2 ; df2/dx1 , df2/dx2]
+Fp=@(x) [2*x(1), -1; 2*x(1)-4, 2*x(2)-1]
+
+x0_1 = [1.5; 1.6];
+x0_2 = [0.2; 1.1];
+
+[n1_nr , sol1_nr] = tp7newtonraphson( F, Fp, x0_1)
+
+[n2_nr , sol2_nr] = tp7newtonraphson( F, Fp, x0_2)

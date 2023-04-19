@@ -34,8 +34,8 @@ f=@(t,y) [ -lte * y(1) ; lte * y(1) - li * y(2) ; li * y(2) - lxe * y(3) ];
 y0 = [1,0,0]; # à l'instant initial que 1 mole de Telurium
 
 h1 = 2/lte;   # h de la limite de stabilité, pour h*beta = 2 (h = 54.822)
-h2 = 1.1*h1;   # 
-h3 = 0.9*h1;   # 
+h2 = 1.1*h1;   #
+h3 = 0.9*h1;   #
 h4 = (1/lte)*0.9;   # pour h*beta < 1 (h = 27.411 * 0.9)
 
 tmax = 600; # changer pour tester
@@ -65,9 +65,9 @@ hold on
 #legend('Te pro','I pro','Xe pro')
 
 yret = tp11eulerret(f, y0, t);
-plot(t,yret(1,:),'-y') # Te ret 
+plot(t,yret(1,:),'-y') # Te ret
 hold on
-plot(t,yret(2,:),'-m') # Iode ret 
+plot(t,yret(2,:),'-m') # Iode ret
 hold on
 plot(t,yret(3,:),'-c') # Xenon ret
 hold on
@@ -85,8 +85,8 @@ hold off
 # chercher expérimentalement hmax pour trouver N_Xe ~= 0.4275 à 5% près
 # chercher un hmax pour ret et un pour pro, lequel est le + favorable ?
 
-hd = ;
-tmaxd = ;
+hd = 1;
+tmaxd = 20;
 td = 0:hd:tmaxd;
 
 # on veut N_Xe (nbre de mole de Xenon):
@@ -103,7 +103,7 @@ hold on
 # pas fini
 
 
-# EX 2 
+# EX 2
 
 # pas fait
 

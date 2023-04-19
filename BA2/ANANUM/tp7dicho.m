@@ -12,7 +12,7 @@
 function [niterations, sol] = tp7dicho(f, a, b, espilon)
   niterations = 0;
   while abs(a-b) > espilon & niterations < 69
-    niterations ++;
+    niterations++;
     x = (a + b)/2;
     if f(a)*f(x) < 0
       b = x;
@@ -24,6 +24,6 @@ function [niterations, sol] = tp7dicho(f, a, b, espilon)
       sol = x;
       break
     endif
-  endwhile 
+  endwhile
 endfunction
 

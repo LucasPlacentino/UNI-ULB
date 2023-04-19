@@ -8,10 +8,10 @@
 % z = nom_fonction(36.5,59) dans la command window
 
 function RES = tp1ex3 (matrice)
-  a = 1
+  a = 1;
   length(matrice)
   for i = 1:length(matrice)
-    a = a*matrice(i,i)
+    a = a*matrice(i,i);
   end
-  RES = a
+  RES = a;
 endfunction

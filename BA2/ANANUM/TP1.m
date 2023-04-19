@@ -45,7 +45,7 @@ L = eye(5) % matrice identite 5x5
 
 % 2. c)
 L(1:5,1) = A(1:5,1)/A(1,1) % ou (2:5,1)
-%L(1:end,1) = A(1:end,1)/A(1,1) 
+%L(1:end,1) = A(1:end,1)/A(1,1)
 L(2:end,1) = -L(2:end,1)
 
 
@@ -63,20 +63,25 @@ Linv = inv(L)
 
 % 3. voir fichier tp1ex3.m
 
+M3 = [1 0 0,
+      4 5 0,
+      7 8 9 ]
 
-
+tp1ex3M3 = tp1ex3(M3)
+detM3 = det(M3)
 
 % 4. a)
 x2 = -1:0.05:1
 for i = 1:length(x2)
 y2(i) = (exp(x2(i)/pi))/(log10(x2(i)+pi))
 endfor
-plot(x2,y2,'-*')
+plot(x2,y2,'-*r')
 
+hold on
 % 4. b)
 % voir fichier tp1ex4b.m
 
-x3 = -1:0.05:1
+x3 = -1:0.05:1;
 f3 = tp1ex4b(x3)
-plot(x3,f3,'-*')
+plot(x3,f3,'-*b')
 
