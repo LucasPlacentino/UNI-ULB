@@ -10,25 +10,25 @@ A = eye(4)-100*diag(ones(3,1),1)+diag(ones(3,1),-1)-100*diag(ones(1,1),-3)
 
 %function [Q R] = factqr (A)
   
-x=A(:,1); % x est une matrice colonne formée par la première colonne de A
+x=A(:,1); % x est une matrice colonne formÃ©e par la premiÃ¨re colonne de A
 x(1) = x(1) + sign(x(1))*norm(x); % change le premier element de x
-v1 = x/norm(x); % le vect v1 est le vect x normé
-%! qu'est-ce que ça fait ??? :
+v1 = x/norm(x); % le vect v1 est le vect x normÃ©
+%! qu'est-ce que Ã§a fait ??? :
 A = (eye(4)-2*v1*transpose(v1))*A; % ? transforme la matrice A ? % correct ???
 %    ^^^^^^^^^^^^^^^^^^^^^^^^^ = Q1
 % A = Q1*A
 
-% ou : (voir corrigé)
+% ou : (voir corrigÃ©)
 % A =- v1*(2*(transpose(v1)*A));
 
-Q1=eye(4)-2*v1*transpose(v1); % ça mtn ou plus tard
+Q1=eye(4)-2*v1*transpose(v1); % Ã§a mtn ou plus tard
 
-x=A(:,2); % x est un vect colonne formé de la deuxieme colonne de A
+x=A(:,2); % x est un vect colonne formÃ© de la deuxieme colonne de A
 x(1) = x(1) + sign(x(1))*norm(x); % meme chose qu'avant mais avec le nouveau vect x
-v2 = x/norm(x); % meme chose, v2 est le nouveau x normé
+v2 = x/norm(x); % meme chose, v2 est le nouveau x normÃ©
 A = (eye(4)-2*v2*transpose(v2))*A; %meme chose qu'avant mais avec v2 % correct ???
 %    ^^^^^^^^^^^^^^^^^^^^^^^^^ = Q2
-Q2=eye(4)-2*v2*transpose(v2); % puis voir corrigé
+Q2=eye(4)-2*v2*transpose(v2); % puis voir corrigÃ©
 
 x=A(:,3);
 x(1) = x(1) + sign(x(1))*norm(x); % meme chose qu'avant mais avec le nouveau vect x
@@ -45,10 +45,10 @@ A = (eye(4)-2*v4*transpose(v4))*A;
 
 R = A
 
-# Créer la matrice Q :
+# CrÃ©er la matrice Q :
 #    Q = Q1*Q2*Q3
 # mais 4x4 3x3 2x2 
-# Qi est en fait identité avec en bas à gauche la matrice avec les infos
+# Qi est en fait identitÃ© avec en bas Ã  gauche la matrice avec les infos
 
 Q=Q1*Q2*Q3
 
@@ -67,7 +67,7 @@ Q=Q1*Q2*Q3
 %endfunction
 
 
-% === puis pour résoudre prob: ? ====
+% === puis pour rÃ©soudre prob: ? ====
 % x = R\(Q\b) % // x= U\(L\b)
 % OU ???
 % x = R\Q'*b % ????
@@ -89,17 +89,17 @@ Q=Q1*Q2*Q3
 % ---- 1)   Factorisation PA=LU  ------
 % voir TP4 ex1 (et TP3 ex3)
 
-% différence avec simple LU ? (LU avec pivotage?)
-% - LU parfois pas possible (pivot sur zéro) alors nécessite pivot => PALU
+% diffÃ©rence avec simple LU ? (LU avec pivotage?)
+% - LU parfois pas possible (pivot sur zÃ©ro) alors nÃ©cessite pivot => PALU
 % - meme flops que LU
-% - PALU existe pour toute matrice régulière
-% - PALU réputée stable ne pratique
+% - PALU existe pour toute matrice rÃ©guliÃ¨re
+% - PALU rÃ©putÃ©e stable ne pratique
 
 % A = ? test
 A = eye(4)-100*diag(ones(3,1),1)+diag(ones(3,1),-1)-100*diag(ones(1,1),-3)
 %b=.....
 % U=A
-% (comme ça on modifie pas la matrice A de départ pendant le calcul)
+% (comme Ã§a on modifie pas la matrice A de dÃ©part pendant le calcul)
 % il faut juste alors un pue modifier le code en dessous
 
 P1 = eye(4);
@@ -111,19 +111,19 @@ P1([1,4],:) = P1([4,1],:); % on switch les LIGNES 1 et 4 de P1
 
 A = P1*A;
 
-%pour les L on va remplacer les éléments de chaque colonne, qui sont
+%pour les L on va remplacer les Ã©lÃ©ments de chaque colonne, qui sont
 %en dessous de la diagonale 
 
 % construction de L1
 L1 = eye(4);
 L1([2:4],1) = -A([2:4],1)/A(1,1);
-% remplace le 2e, 3e et 4e élément de la 1e colonne de L1
-% par l'opposé du:
-% 2e, 3e et 4e élément de la première colonne de A, divisé par le 1e element
-% (info: ce 1e element étant donc sur la diagonale)
+% remplace le 2e, 3e et 4e Ã©lÃ©ment de la 1e colonne de L1
+% par l'opposÃ© du:
+% 2e, 3e et 4e Ã©lÃ©ment de la premiÃ¨re colonne de A, divisÃ© par le 1e element
+% (info: ce 1e element Ã©tant donc sur la diagonale)
 
 A=L1*A;
-% L1 sert à faire apparaitre des zeros dans la premiere colonne
+% L1 sert Ã  faire apparaitre des zeros dans la premiere colonne
 % (elimination de gauss)
 
 % --- meme chose avec P2 ---
@@ -136,9 +136,9 @@ A=P2*A;
 L2=eye(4);
 L2([3:4],2) = -A([3:4],2)/A(2,2);
 % remplace le 3e et 4e element de la 2e colonne de L2
-% par l'opposé du:
-% 3e et 4e element de la 2e colonne de A, divisé par le 2e element
-% (info: ce 2e element étant sur la diagonale)
+% par l'opposÃ© du:
+% 3e et 4e element de la 2e colonne de A, divisÃ© par le 2e element
+% (info: ce 2e element Ã©tant sur la diagonale)
 
 A=L2*1;
 
@@ -150,21 +150,21 @@ L3=eye(4);
 L3(4,3) = -A(4,3)/A(3,3); % ([4,4], ) = (4, )
 A=L3*A;
 
-% L = ( ... matrice identité dont les colonnes du triangle inférieur sont -Lp1 et -Lp2 et -Lp3
+% L = ( ... matrice identitÃ© dont les colonnes du triangle infÃ©rieur sont -Lp1 et -Lp2 et -Lp3
 Lp3 = L3;  % Lp: "L prime" (L')
 Lp2 = P3*L2*P3;
 Lp1 = P3*P2*L1*P2*P3;
 P = P3*P2*P1
-L=eye(4) % matrice identité
-% triangle inférieur sera les colonnes opposées de Lp1 Lp2 et Lp3
+L=eye(4) % matrice identitÃ©
+% triangle infÃ©rieur sera les colonnes opposÃ©es de Lp1 Lp2 et Lp3
 L([2:4],1) = -Lp1([2:4],1);
 L([3:4],2) = -Lp2([3:4],2);
 L(4,3) = -Lp3(4,3)
 
 U = A # U la matrice triangulaire finale de la resolution de Gauss
-%(ici on a modifié la matrice A de départ pendant le calcul)
+%(ici on a modifiÃ© la matrice A de dÃ©part pendant le calcul)
 
-% === résoudre prob : ? ===
+% === rÃ©soudre prob : ? ===
 %x = U\(L\(P*b))   % // x=U\(L\b) de simple fact LU (LU=A)
 
 
