@@ -722,7 +722,7 @@ Principe: approcher la dérivée au point $t_{k+1}$ par...
 
 $$y_{k+1} = y_k + h_kf(t_{k+1},y_{k+1})$$
 
-(On peut utiliser la fonction Octave `fsolve` pour la résolution d'équations non linéaires)  
+(On peut utiliser la fonction Octave `fsolve(g, y(k))` pour la résolution d'équations non linéaires, où `g` la fctn et `y(k)` aux alentours où il faut chercher)  
 
 ##### Algo Octave:
 ```matlab
@@ -767,6 +767,10 @@ Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$).
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
 Stabilité: stable, quel que soit le pas $h_k$.
 
+équation:  
+$$y_{k+1} = y_k + \frac{1}{2}h_k(f(t_k,y_k) + f(t_{k+1},y_{k+1}))$$  
+où come avant $h_k = t_{k+1} - t_k$  
+
 ##### Algo Octave:
 ?  
 
@@ -776,6 +780,11 @@ Methode explicite
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
 Stabilité: stable si $h\beta < 2$.  
 
+équation:  
+$$y_{k+1} = y_k + \frac{1}{2}h_k(f(t_k,y_k) + f(t_{k+1},y_k+h_k f(t_k,y_k)))$$  
+en gros on a changé $y_{k+1}$ dans le membre de droite par $y_k + h_k f(t_k,y_k)$ (la formule d'Euler Progressive).  
+Ce qui la rend donc explicite.  
+
 ##### Algo Octave:
 ?  
 
@@ -783,4 +792,5 @@ Stabilité: stable si $h\beta < 2$.
 ...
 
 ## Chap 9 éq différentielles avec cond aux Limites
-...  
+
+croisons les doigts que ça tombe pas à l'exam  
