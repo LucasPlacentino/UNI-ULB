@@ -278,7 +278,7 @@ $\frac{||\~x-x||}{||x||} \le k(A) \frac{||r^{(k)}||}{||b||}$
 > matrice tri-diagonale  
 > première ligne, que 1 voisin  
 
-$B_J = D_A$ **??**  
+$B_J = D_A$  
 ($D_A$: diagonale de A)  
 
 #### Algo Octave:
@@ -387,7 +387,8 @@ f(x^{(k)}) := ||x-x^{(k)}||^k_A &= (x-x^{(k)})^T A (x-x^{(k)}) \\
 &= x^{(k)T} Ax^{(k)} -2x^{(k)T}b + \text{cste}
 \end{align}$$
 
----
+Soit une direction $p \ne 0$  
+
 $\alpha = \frac{p^Tr^{(k)}}{p^TAp}$ minimise l'énergie $f(x^{(k+A)}$ de  
 $$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$
 
@@ -481,7 +482,7 @@ puis
 ```
 
 ### Newton-Raphson
-Principe: prendre pour $x_{k+1}$ la racine du dév de Teylor de premier ordre autour de $x_k$  
+Principe: prendre pour $x_{k+1}$ la racine du dév de Taylor de premier ordre autour de $x_k$  
 Cela revient,pour autant que $f'(x_k) \ne 0$, à déterminer $x_{k+1}$ qui satisfait:  
 $$f(x_k) + f'(x_k)(x_{k+1}-x_k) = 0$$  
 et donc $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$
@@ -500,6 +501,12 @@ deux problèmes:
 
 - si c'est cyclique  
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/8c18a67d-aee0-45c8-a8a4-ab8889688475)
+
+Convergence s'une suite $x_k$, $k=0,1...$ vers $x$ est d'ordre $p$ s'il existe une constante $C$ tq:
+$$|x-x_{k+1}| \le C|x-x_k|^p$$  
+- si $p=1$ et $C<1$ **convergence linéaire**  
+- si $p=2$ **convergence quadratique**  
+- si $\lim_{k\to\infty} \frac{|x-x_{k+1}|}{|x-x_k|} = 0$ **convergence superlinéaire**
 
 #### Algo Octave:
 ```matlab
@@ -524,6 +531,16 @@ puis
 ```
 
 ### N-R avec recherche linéaire
+Principe: même chose que N-R mais avec un facteur d'amortissement $\alpha_k$ dans l'incrément, qui réduit à chaque itération (on le divise par 2)  
+equation =>  
+$$x_{k+1} = x_k - \alpha_k\frac{f(x_k)}{f'(x_k)}$$  
+en cherchant un facteur $\alpha_k$ qui satisfait $|f(x_{k+1})| < |f(x_k)|$  
+Elle permet d'empecher un comportement cyclique avec un simple N-R.
+
+> Taylor: $f(x_{k+1}) = f(x_k) + f'(c)(x_{k+1}-x_k) = f(x_k)(1-\alpha_k \frac{f'(c)}{f(x_k)})$  
+> ...  
+
+---
 **besoin aussi de f' comme N-R**
 on utilise un facteur d'amortissement $\alpha_k > 0$, qu'on va diviser par 2 jusqu'à l'arret (on commence avec $\alpha=1$)  
 
@@ -557,18 +574,26 @@ puis
 
 ### variantes
 on peut exprimer $f'(x)$ sans le connaitre...  
+- formule de différences finies...  
+- méthode de la sécante...  
+
+### Généralisation au systèmes non-linéaires
+LU...  
 
 ### Newton-Corde
-...
+Principe: factorisation LU peut être couteux pour système à taille importante => LU remplacée par méthode itérative.
+Convergence n'est plus quadratique  
+Factorisation fait qu'une seule fois au début de l'algo  
 
 ### Critères d'arret
-- **[+]** $||f(x_k)|| \le \epsilon_a$
+- **[+]** $||f(x_k)|| \le \epsilon_a$ (ou relativement $||f(x_k)|| \le \epsilon_r||f(x_0)||$)
 - **[-]** nombre max d'itérations
-- **[-]** ...
+- **[-]** Pour les méthodes de type Newton, le fait que la dérivée $f'(x_k)$ ou son
+approximation soit non-inversible peut mener à l’arrêt de la méthode.
 
 ## Chap 6
 Interpolation et approximation  
-...
+... TODO  
 
 
 ## Chap 7
@@ -582,7 +607,7 @@ Plus h est petit, plus c'est précis
 On risque que  la longueur $[a,b]$ soit pas un nombre entier de fois h,  
 alors $h = (b-a) / n$ avec $n$ le nombre d'intervalles  
 
-Formule exacte pour tout polynome de degré au plus 1  
+**Exacte pour tout polynome de degré au plus 1**  
 
 #### Erreurs:
 $c \in ]x_i,x_{x+1}[$  
@@ -611,7 +636,7 @@ endfunction
 Point au milieu de $[a+h,a+2h]$ : $a + \frac{3}{2}h$  
 interpolation quadratique  
 intégrale $= (f(a+h) + h*f(a+\frac{3}{2}h) + f(a+2h)) / 6$  
-Exact pour tout polynome de degré au plus 3  
+**Exact pour tout polynome de degré au plus 3**  
 
 Erreur globale:  
 $|E_{glob}| = -\frac{1}{12} * (b-a)*h^2*|f''(c)|$  
@@ -649,14 +674,50 @@ endfunction
 ### Methode de Romberg
 ...
 
-## Chap 8
-éq différentielles avec cond initiales  
+## Chap 8 éq différentielles avec cond Initiales  
+Prob de Cauchy (scalaire ou vectoriel)
+$$\begin{cases}
+\frac{dy}{dt}(t) = f(t,y(t)), t \in [0,T] \\
+y(0) = y_0
+\end{cases}$$
 
 ### Methode d'Euler
+Ordre: 1  
+Un pas de discrétisation: $h_k = t_{k+1}-t_k$  
+(ou pas d"intégration)  
+h plus petit donne un meilleur solution (on observe que si on double le pas, l'erreur est 2x plus grande (linéairement)).  
+D'ordre 2 l'erreur augmenterait de manière quadratique.  
 
 #### Euler progressive
+Méthode explicite  
+Condition de stabilité:  
+Principe: approcher la dérivée au point $t_k$ par...  
+=> on va vers l'avant  
+
+$$y_{k+1} = y_k + h_kf(t_k,y_k)$$
 
 #### Euler retrograde
+Méthode implicite (pas moyen d'isoler directement $t_{k+1}$)  
+Condition de stabilité:  
+Principe: approcher la dérivée au point $t_{k+1}$ par...  
+=> on va vers l'arrière  
+
+$$y_{k+1} = y_k + h_kf(t_{k+1},y_{k+1})$$
+### Stabilité
 
 
+### Methode du second ordre
 
+#### Methode de Crank-Nicolson
+Methode implicite (pas moyen d'isoler directement $t_{k+1}$)  
+
+
+#### Methode de Heun
+Methode explicite  
+
+
+### Methode multi-pas
+
+
+## Chap 9 éq différentielles avec cond aux Limites
+...  
