@@ -256,13 +256,15 @@ on peut vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)
 
 
 ## Chap 4
-Méthodes itératives pour systemes linéaires  
+Méthodes itératives pour systèmes linéaires  
 => résoudre $Ax=b$ de manière itérative  
 $(k)$ num d'itération  
 erreur $e^{(k)} = x - \^x(k)$  
 $Ae^{(k)} = b - A x^{(k)}$  
+On peut définir $B \tilde{=} A$ si B est plus facile à inverser  
 
 $x^{(k+1)} = x^{(k)} + e^{(k)}$ -> il faut que cette erreur tende vers 0 après les itérations  
+=> $x^{(k+1)} = x^{(k)} + B^{-1}(b - Ax^{(k)})$  
 
 On devra mettre un critère d'arrêt  
 $\frac{||r^{(k)}||}{||b||} \le 10^{-3}$ ($10^{-3}$ par exemple ici)  
@@ -275,6 +277,9 @@ $\frac{||\~x-x||}{||x||} \le k(A) \frac{||r^{(k)}||}{||b||}$
 ### Jacobi
 > matrice tri-diagonale  
 > première ligne, que 1 voisin  
+
+$B_J = D_A$ **??**  
+($D_A$: diagonale de A)  
 
 #### Algo Octave:
 ´´´matlab
@@ -318,6 +323,11 @@ exemple de crit d'arret: $10^{-3}$
 ### Gauss-Seidel
 algo: en gros pareil que Jacobi mais sans $x(0)$  
 
+$B_{GS} = L_A$  
+rappel: $A = L_A + U_A - D_A$  
+($L_A$: triangulaire lower de A  
+$U_A$: triangulaire upper de A  
+$D_A$: diagonale de A)  
 
 #### Algo Octave:
 
@@ -361,11 +371,34 @@ On peut comparer
 $\frac{||\~x-x||}{||x||}$ de Jacobi et Gauss-Seidel.  
 
 
-### Minimisation d'énergie 
-?
+### Minimisation d'énergie
+norme énergie: $||v||_A = \sqrt{v^TAv}$  
+
+principe: choisi une direction $p \ne 0$ et que forme solution approchée à l'iter $k+1$ est  
+$$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$  
+Trouver la valeur de $\alpha$ qui minimise $f(x^{(k+1)}$  
+
+---
+**/!\ système avec A symétrique définie positive**  
+L'énergie d'un système est définie par la focntion:  
+$$\begin{align}
+f(x^{(k)}) := ||x-x^{(k)}||^k_A &= (x-x^{(k)})^T A (x-x^{(k)}) \\
+&= x^{(k)T} Ax^{(k)} -2x^{(k)T}Ax + x^TAx \\
+&= x^{(k)T} Ax^{(k)} -2x^{(k)T}b + \text{cste}
+\end{align}$$
+
+---
+$\alpha = \frac{p^Tr^{(k)}}{p^TAp}$ minimise l'énergie $f(x^{(k+A)}$ de  
+$$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$
+
+#### Algo:
+```matlab
+...
+```
 
 ### Méthode du gradient
-?
+#### Algo
+
 ### Méthode du gradient conjugué
 ?
 
@@ -448,8 +481,14 @@ puis
 ```
 
 ### Newton-Raphson
-on choisi un $x_0$ suffisamment proche de la racine  
+Principe: prendre pour $x_{k+1}$ la racine du dév de Teylor de premier ordre autour de $x_k$  
+Cela revient,pour autant que $f'(x_k) \ne 0$, à déterminer $x_{k+1}$ qui satisfait:  
+$$f(x_k) + f'(x_k)(x_{k+1}-x_k) = 0$$  
+et donc $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$
+
+---
 **ATTENTION**: **il faut connaitre la dérivée de cette fonction**  
+on choisi un $x_0$ suffisamment proche de la racine (en regardant un plot par ex)  
 si racine est un extremum: cette methode est pas super précise  
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/ec25e90e-df1f-4f2b-93c2-a8a7e79d647d)
@@ -528,12 +567,96 @@ on peut exprimer $f'(x)$ sans le connaitre...
 - **[-]** ...
 
 ## Chap 6
-Interpolation et approximation
+Interpolation et approximation  
+...
 
 
+## Chap 7
+Intégration  
 
+### Methode des trapèzes
+Intervalles réguliers  
+Prendre un intervalle $h$ entre $x_i$ et $x_{i+1}$  
+Aire trapèze $= h * (f(a)+f(a+b)) / 2$ (petite base + grande base fois hauteur (l'intervale) sur 2)  
+Plus h est petit, plus c'est précis  
+On risque que  la longueur $[a,b]$ soit pas un nombre entier de fois h,  
+alors $h = (b-a) / n$ avec $n$ le nombre d'intervalles  
 
+Formule exacte pour tout polynome de degré au plus 1  
 
+#### Erreurs:
+$c \in ]x_i,x_{x+1}[$  
+Erreur locale: $E_{loc}(h_i) = -\frac{1}{12}h^3_i f''(c)$  
+
+$c \in ]a,b[$  
+Erreur globale: $E_{glob}(h) = -\frac{1}{12}(b-a)h^2 f''(c)$
+
+#### Algo Octave:
+```matlab
+function [aire] = tp9trapezes (f, a, b, h)
+  
+  n=(b-a)/h;
+  int = 0;
+  
+  for i = 0:n-1
+    int = int + ( h/2 )*( f(a + h*i) + f(a + h*(i+1)) );
+  endfor
+  
+  aire = int;
+  
+endfunction
+```
+
+### Methode de Simpson
+Point au milieu de $[a+h,a+2h]$ : $a + \frac{3}{2}h$  
+interpolation quadratique  
+intégrale $= (f(a+h) + h*f(a+\frac{3}{2}h) + f(a+2h)) / 6$  
+Exact pour tout polynome de degré au plus 3  
+
+Erreur globale:  
+$|E_{glob}| = -\frac{1}{12} * (b-a)*h^2*|f''(c)|$  
+c est un réel appartenant à $[a,b]$  
+
+$|E_{glob}| <= 10^-6$  
+$h^2*|f''(c)| <= 10^-6$  
+
+on va sortir un $h_{erreur} <= sqrt((12*10^-6)/((b-a)*|f''(c)|))$  
+$n = (b-a)/h_{erreur}$ ; appartient PAS à N  
+
+`n = ceil(n)`  
+$h_{effetif} = (b-a)/n <= h_{erreur}$  
+que quand la methode est pas exacte, que quand il y a une erreur à calculer  
+
+si elle est exacte le h est indépendant de l'erreur (car pas d'erreur) donc h qu'on veut  
+
+#### Algo Octave
+```matlab
+function [aire] = tp9simpson(f, a, b, n)
+  h = (b-a)/n;
+  int = 0;
+  for i=0:n-1
+    int = int + (h/6)*(f(a+i*h)+4*f(a+h*(i+0.5))+f(a+h*(i+1)));
+  endfor
+  
+  aire = int;
+  
+endfunction
+```
+
+### Methode de Newton-Cotes
+...
+
+### Methode de Romberg
+...
+
+## Chap 8
+éq différentielles avec cond initiales  
+
+### Methode d'Euler
+
+#### Euler progressive
+
+#### Euler retrograde
 
 
 
