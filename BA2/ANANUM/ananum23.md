@@ -747,26 +747,40 @@ $$\max_k |y_k-y(t_k)| \le Ch^n$$
 (Les méthodes d'Euler sont de **1er** ordre)  
 
 ### Stabilité
+Prenons prob de Cauchy où $\frac{dy}{dt}(t) = - \beta y(t)$  
+La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et croît pour $\beta<0$  
+
 - methode (absolument) stable pour le prob de Cauchy avec $\beta < 0$ si:  
     elle produit une séquence de $y_k$, $k=1,2...$, d'approximations de y(t_k) telle que:  
     $$y_k \to 0 \text{ lorsque } t_k \to \infty$$
 
-- euler **progressive**: **pas toujours** stable  
-- euler **retrograde**: **toujours stable**  
+- euler **progressive**: **pas toujours** stable (pour tout $h$)  
+- euler **retrograde**: **toujours stable** (stable si $|A-h\beta_i|<1$, $i=1,...,n$)  
 
+ex: euler progressive absolument pas stable si $h\beta < 2$
 
 ### Methode du second ordre
 
 #### Methode de Crank-Nicolson
-Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$)  
+Principe: methode s'obtient en approchant l'intégrale par la formule des trapèzes.  
+Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$).  
+Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
+Stabilité: stable, quel que soit le pas $h_k$.
 
+##### Algo Octave:
+?  
 
 #### Methode de Heun (ou Runge-Kutta d'ordre 2)
+Principe: rendre la methode de Crank-Nicolson explicite sur base de la formule d'Euler progressive.  
 Methode explicite  
+Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
+Stabilité: stable si $h\beta < 2$.  
 
+##### Algo Octave:
+?  
 
 ### Methode multi-pas
-
+...
 
 ## Chap 9 éq différentielles avec cond aux Limites
 ...  
