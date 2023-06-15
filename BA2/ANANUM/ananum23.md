@@ -750,9 +750,10 @@ $$\max_k |y_k-y(t_k)| \le Ch^n$$
 Prenons prob de Cauchy où $\frac{dy}{dt}(t) = - \beta y(t)$  
 La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et croît pour $\beta<0$  
 
-- methode (absolument) stable pour le prob de Cauchy avec $\beta < 0$ si:  
+- methode (absolument) stable pour le prob de Cauchy avec $\beta > 0$ si:  
     elle produit une séquence de $y_k$, $k=1,2...$, d'approximations de y(t_k) telle que:  
-    $$y_k \to 0 \text{ lorsque } t_k \to \infty$$
+    $$y_k \to 0 \text{ lorsque } t_k \to \infty$$  
+    (en gros lorsque la "suite" $y_k$ tend vers $0$ quand $t_k \to \infty$)
 
 - euler **progressive**: **pas toujours** stable (pour tout $h$)  
 - euler **retrograde**: **toujours stable** (stable si $|A-h\beta_i|<1$, $i=1,...,n$)  
