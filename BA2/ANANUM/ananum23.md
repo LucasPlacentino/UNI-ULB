@@ -13,7 +13,7 @@ $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$
 **erreur absolue**: $\epsilon_{abs} = |\^x-x|$  
 **erreur relative**(pour x $\ne$ 0): $\epsilon_{rel} = \frac{|\^x-x|}{|x|}$  
 
-en _double_ (64bit): $u \~= 1.1*10^{-16}$  
+en _double_ (64bit): $u \simeq 1.1*10^{-16}$  
 
 ### Conditionnement
 stabilité directe  
@@ -44,11 +44,11 @@ Sys linéaire $Ax=b$
 ### Conditionnement sys liénaire
 > #### cas 1
 > perturbations $\delta b$ de $b$  
-> $\kappa = \sup_{||\delta b||}(\frac{||\delta x||/||x||}{||\delta b||/||b||}) \le \frac{||A^{_1}||||b||}{||x||} = \frac{||A^{-1}||||Ax||}{||x||} \le ||A^{-1}||||A||$  
+> $\kappa = \sup_{||\delta b||}(\frac{||\delta x||/||x||}{||\delta b||/||b||}) \le \frac{||A^{-1}||.||b||}{||x||} = \frac{||A^{-1}||.||Ax||}{||x||} \le ||A^{-1}||.||A||$  
 > 
 > #### cas 2
 > perturbations $\delta A$ de $A$  
-> $\kappa = \sup_{||\delta A||}(\frac{||\delta x||/||x||}{||\delta A||/||A||}) \le ||A^{-1}||||A||$  
+> $\kappa = \sup_{||\delta A||}(\frac{||\delta x||/||x||}{||\delta A||/||A||}) \le ||A^{-1}||.||A||$  
 > 
 
 erreurs dans les données A,b s'un sys linéaire sont amplifiées par (au plus):  
@@ -261,7 +261,7 @@ Méthodes itératives pour systèmes linéaires
 $(k)$ num d'itération  
 erreur $e^{(k)} = x - \^x(k)$  
 $Ae^{(k)} = b - A x^{(k)}$  
-On peut définir $B \tilde{=} A$ si B est plus facile à inverser  
+On peut définir $B \simeq A$ si B est plus facile à inverser  
 
 $x^{(k+1)} = x^{(k)} + e^{(k)}$ -> il faut que cette erreur tende vers 0 après les itérations  
 => $x^{(k+1)} = x^{(k)} + B^{-1}(b - Ax^{(k)})$  
