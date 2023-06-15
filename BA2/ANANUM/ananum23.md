@@ -740,8 +740,16 @@ function [y] = tp10eulerret (f, y0, t) # t contient t_min et t_max
 endfunction
 ```
 
+### Ordre
+methode est d'ordre $n$ si:
+$$\max_k |y_k-y(t_k)| \le Ch^n$$  
+
+(Les méthodes d'Euler sont de **1er** ordre)  
+
 ### Stabilité
-- absolument stable = ...  
+- methode (absolument) stable pour le prob de Cauchy avec $\beta < 0$ si:  
+    elle produit une séquence de $y_k$, $k=1,2...$, d'approximations de y(t_k) telle que:  
+    $$y_k \to 0 \text{ lorsque } t_k \to \infty$$
 
 - euler **progressive**: **pas toujours** stable  
 - euler **retrograde**: **toujours stable**  
