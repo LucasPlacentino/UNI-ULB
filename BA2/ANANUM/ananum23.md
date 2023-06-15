@@ -376,7 +376,8 @@ norme énergie: $||v||_A = \sqrt{v^TAv}$
 
 principe: choisi une direction $p \ne 0$ et que forme solution approchée à l'iter $k+1$ est  
 $$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$  
-Trouver la valeur de $\alpha$ qui minimise $f(x^{(k+1)}$  
+Trouver la valeur de $\alpha$ qui minimise $f(x^{(k+1)})$  
+$$\alpha = \frac{p^Tr^{(k)}}{p^TAp}$$
 
 ---
 **/!\ système avec A symétrique définie positive**  
@@ -684,35 +685,75 @@ y(0) = y_0
 ### Methode d'Euler
 Ordre: 1  
 Un pas de discrétisation: $h_k = t_{k+1}-t_k$  
-(ou pas d"intégration)  
+(ou pas d"intégration).  
 h plus petit donne un meilleur solution (on observe que si on double le pas, l'erreur est 2x plus grande (linéairement)).  
+Erreur $|y_k-y(t_k)|$ semble proportionnelle à $h$.  
+
 D'ordre 2 l'erreur augmenterait de manière quadratique.  
 
 #### Euler progressive
 Méthode explicite  
-Condition de stabilité:  
+Stabilité: **pas toujours** stable  
 Principe: approcher la dérivée au point $t_k$ par...  
 => on va vers l'avant  
 
 $$y_{k+1} = y_k + h_kf(t_k,y_k)$$
 
+##### Algo Octave:
+```matlab
+function [y] = tp10eulerpro (f, y0, t) # t contient t_min et t_max
+  
+  n = length(t);
+  h = t(2) - t(1); # h constante
+  y(1)=y0;
+
+  for i = 1:n-1
+    y(i+1) = y(i)+h*f(t(i),y(i));
+  endfor
+  
+endfunction
+```
+
 #### Euler retrograde
-Méthode implicite (pas moyen d'isoler directement $t_{k+1}$)  
-Condition de stabilité:  
+Méthode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$)  
+Stabilité: **toujours stable**  
 Principe: approcher la dérivée au point $t_{k+1}$ par...  
 => on va vers l'arrière  
 
 $$y_{k+1} = y_k + h_kf(t_{k+1},y_{k+1})$$
+
+(On peut utiliser la fonction Octave `fsolve` pour la résolution d'équations non linéaires)  
+
+##### Algo Octave:
+```matlab
+function [y] = tp10eulerret (f, y0, t) # t contient t_min et t_max
+  
+  n = length(t);
+  h = t(2) - t(1); # h constante
+  y(1)=y0;
+  
+  for i = 1:n-1
+    g=@(X) [X-y(i)-h*f(t(i+1),X)];
+    y(i+1) = fsolve(g, y(i));
+  endfor
+
+endfunction
+```
+
 ### Stabilité
+- absolument stable = ...  
+
+- euler **progressive**: **pas toujours** stable  
+- euler **retrograde**: **toujours stable**  
 
 
 ### Methode du second ordre
 
 #### Methode de Crank-Nicolson
-Methode implicite (pas moyen d'isoler directement $t_{k+1}$)  
+Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$)  
 
 
-#### Methode de Heun
+#### Methode de Heun (ou Runge-Kutta d'ordre 2)
 Methode explicite  
 
 
