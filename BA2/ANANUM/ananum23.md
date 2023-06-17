@@ -733,7 +733,7 @@ function [y] = tp10eulerret (f, y0, t) # t contient t_min et t_max
   y(1)=y0;
   
   for i = 1:n-1
-    g=@(X) [X-y(i)-h*f(t(i+1),X)];
+    g=@(X) y(i) + h*f(t(i+1),X) - X;
     y(i+1) = fsolve(g, y(i));
   endfor
 
@@ -755,10 +755,10 @@ La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et cr
     $$y_k \to 0 \text{ lorsque } t_k \to \infty$$  
     (en gros lorsque la "suite" $y_k$ tend vers $0$ quand $t_k \to \infty$)
 
-- euler **progressive**: **pas toujours** stable (pour tout $h$)  
-- euler **retrograde**: **toujours stable** (stable si $|A-h\beta_i|<1$, $i=1,...,n$)  
+- euler **progressive**: **pas toujours** (stable si $|A-h\beta_i|<1$, $i=1,...,n$)  
+- euler **retrograde**: **toujours stable** stable (pour tout $h$)  
 
-ex: euler progressive absolument pas stable si $h\beta < 2$
+ex: euler progressive absolument pas stable si $h\beta < >? 2$
 
 ### Methode du second ordre
 
