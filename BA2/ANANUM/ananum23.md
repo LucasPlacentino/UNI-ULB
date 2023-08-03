@@ -187,6 +187,14 @@ A=...;
 
 peut aussi utiliser la func `lu()` de Octave pour vérif (`[L U P] = lu(A)`)  
 
+#### Résolution sys
+$x = U^{-1}L^{-1}(P*b)$ ?
+
+##### Étapes et Coûts
+(matrice A est $m \times n$)
+1. Former $A^T A$, $A^Tb$ - **coût = $mn^2$ (symétrie) $+ 2mn$ flops**
+2. Calculer la fact LU avec pivot $LU = P(A^T A)$ - **coût = $\frac{2}{3}n^3$ flops**
+3. résoudre $Ly = P(A^T b)$ et $Ux=y$ - **coût = $2n^2$ flops**
 
 ## Chap 3
 
@@ -247,16 +255,17 @@ on peut vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)
 
 - coût: $2n^2(m-n/3)+O(mn)$ pour une matrice A de dimensions $m \times n$  
 
-### Résolution sys
+#### Résolution sys
 $x = \hat{R}^{-1}\hat{Q}^T b$
 
-($\hat{R}$ est triangulaire (supérieure) donc devrait être facile à inverser)
+($\hat{R}$ est triangulaire (supérieure) donc devrait être facile à inverser)  
+($Q^{-1}=Q^T$ car Q orthogonale)
 
-#### Étapes et Coûts
+##### Étapes et Coûts
 (matrice A est $m \times n$)
-1. Factorisation $\hat{Q}\hat{R}=A$ - **coût = $2n^2(m-\frac{n}{3}) flops$**
-2. former $\hat{Q}^T b$ - **coût = $4mn$**
-3. résoudre $\hat{R} x = \hat{Q}^T b$ - **coût = $n^2$**
+1. Factorisation $\hat{Q}\hat{R}=A$ - **coût = $2n^2(m-\frac{n}{3})$ flops**
+2. Former $\hat{Q}^T b$ - **coût = $4mn$ flops**
+3. Résoudre $\hat{R} x = \hat{Q}^T b$ - **coût = $n^2$ flops**
 
 ### Interlude: propriétés Norme Euclidienne
 ? nécessaire ?
