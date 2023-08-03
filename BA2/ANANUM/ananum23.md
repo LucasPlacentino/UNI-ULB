@@ -1,4 +1,4 @@
-# Ananum notes 23
+# Synthèse Ananum 23
 
 ## Chap 1
 ### virgules flottantes
