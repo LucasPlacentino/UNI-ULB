@@ -392,6 +392,7 @@ $$\alpha = \frac{p^Tr^{(k)}}{p^TAp}$$
 ---
 > [!WARNING] 
 > **/!\ système avec A symétrique définie positive**  
+
 L'énergie d'un système est définie par la focntion:  
 $$\begin{align}
 f(x^{(k)}) := ||x-x^{(k)}||^k_A &= (x-x^{(k)})^T A (x-x^{(k)}) \\
@@ -502,6 +503,7 @@ et donc $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$
 ---
 > [!WARNING] 
 > **ATTENTION**: **il faut connaitre la dérivée de cette fonction**  
+
 on choisi un $x_0$ suffisamment proche de la racine (en regardant un plot par ex)  
 si racine est un extremum: cette methode est pas super précise  
 
