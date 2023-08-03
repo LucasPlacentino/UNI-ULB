@@ -247,12 +247,22 @@ on peut vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)
 
 - coût: $2n^2(m-n/3)+O(mn)$ pour une matrice A de dimensions $m \times n$  
 
+### Résolution sys
+$x = \hat{R}^{-1}\hat{Q}^T b$
+
+($\hat{R}$ est triangulaire (supérieure) donc devrait être facile à inverser)
+
+#### Étapes et Coûts
+(matrice A est $m \times n$)
+1. Factorisation $\hat{Q}\hat{R}=A$ - **coût = $2n^2(m-\frac{n}{3}) flops$**
+2. former $\hat{Q}^T b$ - **coût = $4mn$**
+3. résoudre $\hat{R} x = \hat{Q}^T b$ - **coût = $n^2$**
 
 ### Interlude: propriétés Norme Euclidienne
-?
+? nécessaire ?
 
 ### conditionnement sys surdéterminés
-?
+? nécessaire ?
 
 
 ## Chap 4
