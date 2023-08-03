@@ -10,15 +10,15 @@ $\pm\bar{O.d_{1}d_{2}...d_{t}}.\beta^e = \pm \beta^e\sum{t}{i=1}{\frac{d_{i}}{\b
 u: l'unité d'arrondi  
 $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$  
 
-**erreur absolue**: $\epsilon_{abs} = |\^x-x|$  
-**erreur relative**(pour x $\ne$ 0): $\epsilon_{rel} = \frac{|\^x-x|}{|x|}$  
+**erreur absolue**: $\epsilon_{abs} = |\hat{x}-x|$  
+**erreur relative**(pour x $\ne$ 0): $\epsilon_{rel} = \frac{|\hat{x}-x|}{|x|}$  
 
 en _double_ (64bit): $u \simeq 1.1*10^{-16}$  
 
 ### Conditionnement
 stabilité directe  
 en x s'il exite $C_1$, $C_2 \ge 1$ tq:  
-$||\^y-y|| \le C_1 ||f(x+\delta x)-f(x)||$ qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite  
+$||\hat{y}-y|| \le C_1 ||f(x+\delta x)-f(x)||$ qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite  
 pour au moins un $\delta x$ tq $||\delta x||/||x|| \le C_2 u$  
 
 le **conditionnement**:  
@@ -32,8 +32,8 @@ $\kappa(x) = \sup\frac{\text{erreur relative résultat}}{\text{erreur relative d
 - si f(x) différenciable (et f'(x) matr Jacobienne):  
     $\kappa(x) = \frac{||f'(x)||.||x||}{||f(x)||}$  
 
-**erreur inverse** $\Delta x$ d'un algo $\^y$:  
-tq $f(x+ \Delta x) = \^y$  
+**erreur inverse** $\Delta x$ d'un algo $\hat{y}$:  
+tq $f(x+ \Delta x) = \hat{y}$  
 
 ----
 
@@ -259,7 +259,7 @@ on peut vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)
 Méthodes itératives pour systèmes linéaires  
 => résoudre $Ax=b$ de manière itérative  
 $(k)$ num d'itération  
-erreur $e^{(k)} = x - \^x(k)$  
+erreur $e^{(k)} = x - \hat{x}(k)$  
 $Ae^{(k)} = b - A x^{(k)}$  
 On peut définir $B \simeq A$ si B est plus facile à inverser  
 
