@@ -22,3 +22,9 @@
 
 ### Newton-Cotes
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d0d5fdd6-fed8-453f-be9b-5940abf75b50)
+
+### Exemple $\mathbb{F}$
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/38eb6755-ecf7-49e0-97be-019d79fc810c)
+
+### Exemple fl(x)
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/b680ded8-2a95-467a-a979-f0745b373ef9)
