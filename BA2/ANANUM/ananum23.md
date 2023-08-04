@@ -13,22 +13,22 @@ $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$
 **erreur absolue**: $\epsilon_{abs} = |\widehat{x}-x|$  
 **erreur relative**(pour x $\ne$ 0): $\epsilon_{rel} = \frac{|\widehat{x}-x|}{|x|}$  
 
-en _double_ (64bit): $u \simeq 1.1*10^{-16}$  
+En _double_ (64bit): $u \simeq 1.1*10^{-16}$  
 
 ### Conditionnement
-stabilité directe  
-en x s'il exite $C_1$, $C_2 \ge 1$ tq:  
+Stabilité directe  
+En x s'il exite $C_1$, $C_2 \ge 1$ tq:  
 $||\widehat{y}-y|| \le C_1 ||f(x+\delta x)-f(x)||$ qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite  
-pour au moins un $\delta x$ tq $||\delta x||/||x|| \le C_2 u$  
+Pour au moins un $\delta x$ tq $||\delta x||/||x|| \le C_2 u$  
 
-le **conditionnement**:  
+Le **conditionnement**:  
 $\kappa(x) := \lim_{\epsilon -> 0} (\sup_{||\delta x|| \le \epsilon||x||}(\frac{||f(x+ \delta x)-f(x)|| / ||f(x)||}{||\delta x|| / ||x||}))$  
-le **conditionnement** est le **pire des facteurs** par lequel i lfaut multiplier les erreurs relatives dans $x$ pour obtenir les erreurs relatives dans $f(x)$ (avec erreurs -> 0)  
+Le **conditionnement** est le **pire des facteurs** par lequel il faut multiplier les erreurs relatives dans $x$ pour obtenir les erreurs relatives dans $f(x)$ (avec erreurs -> 0)  
 
 $\kappa(x) = \sup\frac{\text{erreur relative résultat}}{\text{erreur relative données}}$  
 
 - conditionnement ne dépend pas de l'algo, mais bien du problème considéré (via $y=f(x)$)  
-- si $\kappa(x) >> 1$ prob mal conditionné  
+- si $\kappa(x) >> 1$ problème mal conditionné  
 - si f(x) différenciable (et f'(x) matr Jacobienne):  
     $\kappa(x) = \frac{||f'(x)||.||x||}{||f(x)||}$  
 
@@ -39,7 +39,7 @@ tq $f(x+ \Delta x) = \widehat{y}$
 
 ## Chap 2
 
-Sys linéaire $Ax=b$  
+Système linéaire $Ax=b$  
 
 ### Conditionnement système linéaire
 > #### cas 1
@@ -106,9 +106,9 @@ $PA=LU$
 - **existe** pour toute matrice régulière
 - réputée **stable en pratique**
 
-calcul du dét(A)  
+Calcul du dét(A)  
 
-inversion matricielle  
+Permet l'inversion matricielle  
 
 #### Algo Octave:
 ```matlab
@@ -185,7 +185,7 @@ A=...;
 # x = ?? U\(L\(P*b)) ??
 ```
 
-peut aussi utiliser la func `lu()` de Octave pour vérif (`[L U P] = lu(A)`)  
+On peut ensuite aussi utiliser la func `lu()` de Octave pour (seulement) vérifier (`[L U P] = lu(A)`)  
 
 #### Résolution sys
 $x = U^{-1}L^{-1}(P*b)$ ?
@@ -202,7 +202,7 @@ $x = U^{-1}L^{-1}(P*b)$ ?
 ## Chap 3
 
 ### Factorisation QR
-matrice $Q$ orthogonale : carrée et $Q^TQ = I$  
+Matrice $Q$ orthogonale : carrée et $Q^TQ = I$  
 
 $R = (r_{ij})$ trapézoidale suéprieure si $r_{ij}=0$ pour tout $i>j$  
 
@@ -211,7 +211,7 @@ $A = QR$
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d449b37b-ef3e-4d7c-8b9a-a26efbffb4a9)
 
 #### Algo Octave:
-(on peut le faire en boucle for mais pas important):  
+(on peut le faire en boucle `for`):  
 ```matlab
 function [Q R] = factQR (A)
   x = A(:,1);
@@ -254,7 +254,7 @@ A=...;
 [Q R] = factQR(A)
 ```
 
-on peut vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)  
+on peut ensuite aussi (seulement) vérifier avec `qr(A)` d'Octave (ou `qr(A,0)` pour une QR réduite)  
 
 - coût: $2n^2(m-n/3)+O(mn)$ pour une matrice A de dimensions $m \times n$  
 
@@ -277,8 +277,8 @@ $x = \hat{R}^{-1}\hat{Q}^T b$
 ? nécessaire ?
 
 ### Conditionnement systèmes surdéterminés
-? nécessaire ?
-
+? nécessaire ?  
+> ??  
 
 ## Chap 4
 Méthodes itératives pour systèmes linéaires  
@@ -299,6 +299,7 @@ $\frac{||\widetilde{x}-x||}{||x||} \le k(A) \frac{||r^{(k)}||}{||b||}$
 
 
 ### Méthodes stationnaires
+> ?
 ### Jacobi
 > matrice tri-diagonale  
 > première ligne, que 1 voisin  
@@ -307,7 +308,8 @@ $B_J = D_A$
 ($D_A$: diagonale de A)  
 
 #### Algo Octave:
-´´´matlab
+
+```matlab
 function [pfait, rsurb, sol] = tp6(A, b, critdarret)
     
     x = zeros(size(A,1),1);
@@ -339,17 +341,16 @@ function [pfait, rsurb, sol] = tp6(A, b, critdarret)
     endwhile
 
 endfunction
+```
 
-´´´
-
-exemple de crit d'arret: $10^{-3}$  
+Exemple de crit d'arret: $10^{-3}$  
 
 
 ### Gauss-Seidel
-algo: en gros pareil que Jacobi mais sans $x(0)$  
+Algo: en gros pareil que Jacobi mais sans $x(0)$  
 
 $B_{GS} = L_A$  
-rappel: $A = L_A + U_A - D_A$  
+Rappel: $A = L_A + U_A - D_A$  
 ($L_A$: triangulaire lower de A  
 $U_A$: triangulaire upper de A  
 $D_A$: diagonale de A)  
@@ -389,17 +390,17 @@ function [pfait, rsurb, sol] = tp6ex2(A, b, critdarret)
 endfunction
 ```
 
-exemple de crit d'arret: $10^{-3}$  
+Exemple de crit d'arret: $10^{-3}$  
 
 
-On peut comparer
+On peut comparer  
 $\frac{||\~x-x||}{||x||}$ de Jacobi et Gauss-Seidel.  
 
 
 ### Minimisation d'énergie
-norme énergie: $||v||_A = \sqrt{v^TAv}$  
+Norme énergie: $||v||_A = \sqrt{v^TAv}$  
 
-principe: choisi une direction $p \ne 0$ et que forme solution approchée à l'iter $k+1$ est  
+Principe: choisi une direction $p \ne 0$ et que forme solution approchée à l'iter $k+1$ est  
 $$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$  
 Trouver la valeur de $\alpha$ qui minimise $f(x^{(k+1)})$  
 $$\alpha = \frac{p^Tr^{(k)}}{p^TAp}$$
@@ -421,30 +422,33 @@ $\alpha = \frac{p^Tr^{(k)}}{p^TAp}$ minimise l'énergie $f(x^{(k+A)}$ de
 $$x^{(k+1)}(\alpha) = x^{(k)} + \alpha p$$
 
 #### Algo:
+> TODO
 ```matlab
 ...
 ```
 
 ### Méthode du gradient
+> ?
+
 #### Algo
+> TODO
 
 ### Méthode du gradient conjugué
-?
-
+> ?
 
 ### Controle de convergence
-
+> ?
 
 ### Critère d'arret
-norme du résidu...
+Norme du résidu...
 
 > **TP6: interpollation ?**
 
 ## Chap 5
-équations et sys non-linéaires  
+Équations et systèmes non-linéaires  
 
 ### Dichotomie
-critère d'arret de limite d'iterations
+Critère d'arrêt de limite d'iterations
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/fe5dd4b7-aa39-497d-8f3b-2bf10b529ff6)
 
@@ -476,7 +480,7 @@ puis
 ```
 
 ### Fausse position
-crit d'arret: on va evaluer si $f(x^{(k+1)}) < \epsilon$  
+Critère d'arrêt: on va évaluer si $f(x^{(k+1)}) < \epsilon$  
 > ?
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/49dbf298-4f79-48a5-8df9-e3681053a6c3)
@@ -510,7 +514,7 @@ puis
 ```
 
 ### Newton-Raphson
-Principe: prendre pour $x_{k+1}$ la racine du dév de Taylor de premier ordre autour de $x_k$  
+Principe: prendre pour $x_{k+1}$ la racine du développement de Taylor de premier ordre autour de $x_k$  
 Cela revient,pour autant que $f'(x_k) \ne 0$, à déterminer $x_{k+1}$ qui satisfait:  
 $$f(x_k) + f'(x_k)(x_{k+1}-x_k) = 0$$  
 et donc $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$
@@ -519,20 +523,20 @@ et donc $x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}$
 > [!WARNING] 
 > **ATTENTION**: **il faut connaitre la dérivée de cette fonction**  
 
-on choisi un $x_0$ suffisamment proche de la racine (en regardant un plot par ex)  
-si racine est un extremum: cette methode est pas super précise  
+On choisi un $x_0$ suffisamment proche de la racine (en regardant un plot par ex)  
+Si racine est un extremum: cette methode est pas super précise  
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/ec25e90e-df1f-4f2b-93c2-a8a7e79d647d)
 
 
-deux problèmes:  
+Deux problèmes:  
 - si ça converge pas  
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/990cd124-3b3e-4fc9-aa13-24458c25c171)
 
 - si c'est cyclique  
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/8c18a67d-aee0-45c8-a8a4-ab8889688475)
 
-Convergence s'une suite $x_k$, $k=0,1...$ vers $x$ est d'ordre $p$ s'il existe une constante $C$ tq:
+Convergence d'une suite $x_k$, $k=0,1...$ vers $x$ est d'ordre $p$ s'il existe une constante $C$ tq:
 $$|x-x_{k+1}| \le C|x-x_k|^p$$  
 - si $p=1$ et $C<1$ **convergence linéaire**  
 - si $p=2$ **convergence quadratique**  
@@ -562,17 +566,17 @@ puis
 
 ### N-R avec recherche linéaire
 Principe: même chose que N-R mais avec un facteur d'amortissement $\alpha_k$ dans l'incrément, qui réduit à chaque itération (on le divise par 2)  
-equation =>  
+Équation =>  
 $$x_{k+1} = x_k - \alpha_k\frac{f(x_k)}{f'(x_k)}$$  
-en cherchant un facteur $\alpha_k$ qui satisfait $|f(x_{k+1})| < |f(x_k)|$  
-Elle permet d'empecher un comportement cyclique avec un simple N-R.
+En cherchant un facteur $\alpha_k$ qui satisfait $|f(x_{k+1})| < |f(x_k)|$  
+Elle permet d'empêcher un comportement cyclique avec un simple N-R.
 
 > Taylor: $f(x_{k+1}) = f(x_k) + f'(c)(x_{k+1}-x_k) = f(x_k)(1-\alpha_k \frac{f'(c)}{f(x_k)})$  
 > ...  
 
 ---
-**besoin aussi de f' comme N-R**
-on utilise un facteur d'amortissement $\alpha_k > 0$, qu'on va diviser par 2 jusqu'à l'arret (on commence avec $\alpha=1$)  
+**Besoin aussi de f' comme N-R**
+On utilise un facteur d'amortissement $\alpha_k > 0$, qu'on va diviser par 2 jusqu'à l'arret (on commence avec $\alpha=1$)  
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/295ba8ef-a799-43cf-b093-d0abf5d85c0f)
 
@@ -603,12 +607,14 @@ puis
 ```
 
 ### Variantes
-on peut exprimer $f'(x)$ sans le connaitre...  
+On peut exprimer $f'(x)$ sans le connaitre...  
 - formule de différences finies...  
 - méthode de la sécante...  
 
 ### Généralisation au systèmes non-linéaires
 LU...  
+
+> ?
 
 ### Newton-Corde
 Principe: factorisation LU peut être couteux pour système à taille importante => LU remplacée par méthode itérative.
@@ -619,11 +625,12 @@ Factorisation fait qu'une seule fois au début de l'algo
 - **[+]** $||f(x_k)|| \le \epsilon_a$ (ou relativement $||f(x_k)|| \le \epsilon_r||f(x_0)||$)
 - **[-]** nombre max d'itérations
 - **[-]** Pour les méthodes de type Newton, le fait que la dérivée $f'(x_k)$ ou son
-approximation soit non-inversible peut mener à l’arrêt de la méthode.
+Approximation soit non-inversible peut mener à l’arrêt de la méthode.
 
 ## Chap 6
 Interpolation et approximation  
-... TODO  
+...  
+> TODO  
 
 
 ## Chap 7
@@ -720,10 +727,11 @@ où $w_i$ (ici pour les degrés $n \le 4$) :
 On peut voir que $n=1$ donne la méthode des trapèzes et que $n=2$ donne Simpson!  
 En plus Newton-Cotes est donné dans le formulaire à l'examen! (mais pas les colonnes avec les erreurs)  
 ### Méthode de Romberg
-...
+...  
+> ?  
 
 ## Chap 8 équations différentielles avec Conditions Initiales  
-Prob de Cauchy (scalaire ou vectoriel)
+Problème de Cauchy (scalaire ou vectoriel)  
 $$\begin{cases}
 \frac{dy}{dt}(t) = f(t,y(t)), t \in [0,T] \\
 y(0) = y_0
@@ -733,7 +741,7 @@ y(0) = y_0
 Ordre: 1  
 Un pas de discrétisation: $h_k = t_{k+1}-t_k$  
 (ou pas d"intégration).  
-h plus petit donne un meilleur solution (on observe que si on double le pas, l'erreur est 2x plus grande (linéairement)).  
+$h$ plus petit donne une meilleur solution (on observe que si on double le pas, l'erreur est 2x plus grande (linéairement)).  
 Erreur $|y_k-y(t_k)|$ semble proportionnelle à $h$.  
 
 D'ordre 2 l'erreur augmenterait de manière quadratique.  
@@ -741,8 +749,8 @@ D'ordre 2 l'erreur augmenterait de manière quadratique.
 #### Euler progressive
 Méthode explicite  
 Stabilité: **pas toujours** stable  
-Principe: approcher la dérivée au point $t_k$ par...  
-=> on va vers l'avant  
+Principe: approcher la dérivée au point $t_k$ par...?  
+$\Rightarrow$ on va vers l'avant  
 
 $$y_{k+1} = y_k + h_kf(t_k,y_k)$$
 
@@ -764,8 +772,8 @@ endfunction
 #### Euler rétrograde
 Méthode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$)  
 Stabilité: **toujours stable**  
-Principe: approcher la dérivée au point $t_{k+1}$ par...  
-=> on va vers l'arrière  
+Principe: approcher la dérivée au point $t_{k+1}$ par...?  
+$\Rightarrow$ on va vers l'arrière  
 
 $$y_{k+1} = y_k + h_kf(t_{k+1},y_{k+1})$$
 
@@ -788,16 +796,16 @@ endfunction
 ```
 
 ### Ordre
-methode est d'ordre $n$ si:
+Méthode est d'ordre $n$ si:
 $$\max_k |y_k-y(t_k)| \le Ch^n$$  
 
 (Les méthodes d'Euler sont de **1er** ordre)  
 
 ### Stabilité
-Prenons prob de Cauchy où $\frac{dy}{dt}(t) = - \beta y(t)$  
-La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et croît pour $\beta<0$  
+Prenons un problème de Cauchy où $\frac{dy}{dt}(t) = - \beta y(t)$  
+La solution exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et croît pour $\beta<0$  
 
-- methode (absolument) stable pour le prob de Cauchy avec $\beta > 0$ si:  
+- méthode (absolument) stable pour le problème de Cauchy avec $\beta > 0$ si:  
     elle produit une séquence de $y_k$, $k=1,2...$, d'approximations de y(t_k) telle que:  
     $$y_k \to 0 \text{ lorsque } t_k \to \infty$$  
     (en gros lorsque la "suite" $y_k$ tend vers $0$ quand $t_k \to \infty$)
@@ -805,40 +813,48 @@ La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et cr
 - euler **progressive**: **pas toujours** (stable si $|A-h\beta_i|<1$, $i=1,...,n$)  
 - euler **retrograde**: **toujours stable** stable (pour tout $h$)  
 
-ex: euler progressive absolument pas stable si $h\beta < >? 2$
+> ex: euler progressive absolument **pas** stable si $h\beta < >? 2$  
+> ?  
 
 ### Méthode du second ordre
 
 #### Méthode de Crank-Nicolson
-Principe: methode s'obtient en approchant l'intégrale par la formule des trapèzes.  
-Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$).  
+Principe: méthode s'obtient en approchant l'intégrale par la formule des trapèzes.  
+Méthode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$).  
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
-Stabilité: stable, quel que soit le pas $h_k$.
+Stabilité: stable, quel que soit le pas $h_k$.  
 
-équation:  
+Équation:  
 $$y_{k+1} = y_k + \frac{1}{2}h_k(f(t_k,y_k) + f(t_{k+1},y_{k+1}))$$  
-où come avant $h_k = t_{k+1} - t_k$  
+où comme avant $h_k = t_{k+1} - t_k$  
 
 ##### Algo Octave:
 ?  
+> TODO  
 
 #### Méthode de Heun (ou Runge-Kutta d'ordre 2)
-Principe: rendre la methode de Crank-Nicolson explicite sur base de la formule d'Euler progressive.  
-Methode explicite  
+Principe: rendre la méthode de Crank-Nicolson explicite sur base de la formule d'Euler progressive.  
+Méthode explicite  
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
 Stabilité: stable si $h\beta < 2$.  
 
-équation:  
+Équation:  
 $$y_{k+1} = y_k + \frac{1}{2}h_k(f(t_k,y_k) + f(t_{k+1},y_k+h_k f(t_k,y_k)))$$  
 en gros on a changé $y_{k+1}$ dans le membre de droite par $y_k + h_k f(t_k,y_k)$ (la formule d'Euler Progressive).  
 Ce qui la rend donc explicite.  
 
 ##### Algo Octave:
 ?  
+> TODO  
 
 ### Méthode multi-pas
-...
+...  
+> ?  
 
 ## Chap 9 équations différentielles avec Conditions aux Limites
 
 croisons les doigts que ça tombe pas à l'exam :(  
+
+-------------
+
+by Lucas Placentino - &copy; 2023
