@@ -3,20 +3,33 @@
 ## Chap 1
 ### Virgules flottantes
 
-$$\pm\overline{0.d_{1}d_{2}...d_{t}}.\beta^e = \pm \beta^e\sum^{t}_{i=1}\frac{d_{i}}{\beta^i}$$  
-- $\beta$: est la **base** (2=bianire, 10=décimal)
-- $t$: est le **nombre de chiffres significatifs**
-- $d_i$: est l'**$i$ème chiffre significatif** ($0 \le d_i \le \beta -1$)  
+$$\pm\overline{0.d_{1}d_{2}...d_{t}}\cdot\beta^e = \pm \beta^e\sum^{t}_{i=1}\frac{d_{i}}{\beta^i}$$  
+- $\beta\,$: est la **base** (2=bianire, 10=décimal)
+- $t\,$: est le **nombre de chiffres significatifs**
+- $d_i\,$: est l'**$i$ème chiffre significatif** ($0 \le d_i \le \beta -1$)  
   L'ensemble des chiffres significatifs $\overline{0.d_1d_2...d_t}$ forment la **mantisse**
-- $e$: est l'**exposant** ($e_{min} \le e \le e_{max}$)
+- $e\,$: est l'**exposant** ($e_{min} \le e \le e_{max}$)
+
+> Exemple: avec $t=3$ chiffres significatifs  
+> - $2$ est $\overline{0.200}\cdot 10^1$ en décimale (mais aussi $\overline{0.020}\cdot 10^2$ et $\overline{0.002}\cdot 10^3$)  
+>   vérification: $10^1(\frac{2}{10^1}+\frac{0}{10^2}+\frac{0}{10^3}) = 2$  
+> - $1/2$ est $\overline{0.500}\cdot 10^0$ endécimale et $\overline{0.100}\cdot 2^0$ en binaire  
+>   vérification: $10^0(\frac{5}{10^1}+\frac{0}{10^2}+\frac{0}{10^3}) = \frac{1}{2} = 2^0(\frac{1}{2^1}+\frac{0}{2^2}+\frac{0}{2^3})$  
 
 La représentation avec $d_1 \ne 0$ est **normalisée**.  
+(En binaire cela implique que $d_1 = 1$)  
 
-> ...  
+L'ensemble des réels possédant une représentation normalisée est noté $\mathbb{F}$  
+> Exemple:  
+> ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/38eb6755-ecf7-49e0-97be-019d79fc810c)
 
 ### Erreur d'arrondi
 
-u: l'unité d'arrondi  
+$\text{fl}(x) = \,$ le réel dans $\mathbb{F}$ le plus proche de $x \in \mathbb{R}$  
+> Exemple (avec le précédent):  
+> ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/b680ded8-2a95-467a-a979-f0745b373ef9)
+
+$u$: l'unité d'arrondi  
 $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$  
 
 **erreur absolue**: $\epsilon_{abs} = |\widehat{x}-x|$  
@@ -32,7 +45,7 @@ qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite
 Pour au moins un $\delta x$ tq $||\delta x||/||x|| \le C_2 u$  
 
 Le **conditionnement**:  
-$\kappa(x) := \lim_{\epsilon -> 0} (\sup_{||\delta x|| \le \epsilon||x||}(\frac{||f(x+ \delta x)-f(x)|| / ||f(x)||}{||\delta x|| / ||x||}))$  
+$\kappa(x) := \underset{\epsilon \rightarrow 0}{\lim} (\underset{||\delta x|| \le \epsilon||x||}{\sup}(\frac{||f(x+ \delta x)-f(x)|| / ||f(x)||}{||\delta x|| / ||x||}))$  
 Le **conditionnement** est le **pire des facteurs** par lequel il faut multiplier les erreurs relatives dans $x$ pour obtenir les erreurs relatives dans $f(x)$ (avec erreurs -> 0)  
 
 $\kappa(x) = \sup\frac{\text{erreur relative résultat}}{\text{erreur relative données}}$  
