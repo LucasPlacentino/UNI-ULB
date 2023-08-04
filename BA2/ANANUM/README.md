@@ -19,3 +19,6 @@
 
 ### N-R avec recherche linéaire
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/295ba8ef-a799-43cf-b093-d0abf5d85c0f)
+
+### Newton-Cotes
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d0d5fdd6-fed8-453f-be9b-5940abf75b50)
