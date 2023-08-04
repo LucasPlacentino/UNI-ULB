@@ -3,7 +3,16 @@
 ## Chap 1
 ### Virgules flottantes
 
-$\pm\bar{O.d_{1}d_{2}...d_{t}}.\beta^e = \pm \beta^e\sum{t}{i=1}{\frac{d_{i}}{\beta^i}}$  
+$$\pm\overline{0.d_{1}d_{2}...d_{t}}.\beta^e = \pm \beta^e\sum^{t}_{i=1}\frac{d_{i}}{\beta^i}$$  
+- $\beta$: est la **base** (2=bianire, 10=décimal)
+- $t$: est le **nombre de chiffres significatifs**
+- $d_i$: est l'**$i$ème chiffre significatif** ($0 \le d_i \le \beta -1$)  
+  L'ensemble des chiffres significatifs $\overline{0.d_1d_2...d_t}$ forment la **mantisse**
+- $e$: est l'**exposant** ($e_{min} \le e \le e_{max}$)
+
+La représentation avec $d_1 \ne 0$ est **normalisée**.  
+
+> ...  
 
 ### Erreur d'arrondi
 
@@ -11,14 +20,15 @@ u: l'unité d'arrondi
 $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$  
 
 **erreur absolue**: $\epsilon_{abs} = |\widehat{x}-x|$  
-**erreur relative**(pour x $\ne$ 0): $\epsilon_{rel} = \frac{|\widehat{x}-x|}{|x|}$  
+**erreur relative**(pour $x \ne 0$): $\epsilon_{rel} = \frac{|\widehat{x}-x|}{|x|}$  
 
 En _double_ (64bit): $u \simeq 1.1*10^{-16}$  
 
 ### Conditionnement
 Stabilité directe  
 En x s'il exite $C_1$, $C_2 \ge 1$ tq:  
-$||\widehat{y}-y|| \le C_1 ||f(x+\delta x)-f(x)||$ qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite  
+$$||\widehat{y}-y|| \le C_1 ||f(x+\delta x)-f(x)||$$  
+qu'on peut diviser par $||y||$ à gauche et $||f(x)||$ à droite  
 Pour au moins un $\delta x$ tq $||\delta x||/||x|| \le C_2 u$  
 
 Le **conditionnement**:  
