@@ -143,7 +143,21 @@ $\:= (-1)^p a_{11}^{}(1) \cdot\cdot\cdot a_{nn}^{(n)}$
 > **Rappel**: pour deux matrices **carrées** $B$, $C$:  
 > $\text{det}(BC)=\text{det}(B)\text{det}(C)$
 
-Permet l'inversion matricielle  
+Permet aussi l'inversion matricielle (_slide 25 ch2_)  
+> si $x_i$ est la colonne $i$ de $A^{-1}$ alors elle est la sol de $Ax_i=e_i$  
+> avec $e_i$ le vecteur de la base canonique (sa composante $i$ vaut $1$ et les autres valent $0$)  
+
+Calculer $A^{-1}$ en  
+1. calulant la factorisation $PA=LU$ de $A$  
+    > ($\frac{2}{3}n^3+\mathcal{O}(n^2)$ flops)  
+2. permutant (pour $i=1, ...\, ,n$) $e_{pi}=Pe_i$  
+    > ($0$ flops, au plus $n(n-1)$ permutations)  
+3. résolvant (pour $i=1, ...\, ,n$) $Ly_i=e_{pi}$  
+    > ($n^3$ flops)  
+4. résolvant (pour $i=1, ...\, ,n$) $Ux_i=y_i$  
+    > ($n^3$ flops)  
+
+pour $\frac{8}{3}n^3+\mathcal{O}(n^2)$ flops en tout  
 
 #### Algo Octave:
 ```matlab
