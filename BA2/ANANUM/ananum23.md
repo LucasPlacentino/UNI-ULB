@@ -624,21 +624,25 @@ Interpolation et approximation
 Intégration  
 
 ### Methode des trapèzes
+On s'approche de f par interpolation linéaire  
 Intervalles réguliers  
 Prendre un intervalle $h$ entre $x_i$ et $x_{i+1}$  
-Aire trapèze $= h * (f(a)+f(a+b)) / 2$ (petite base + grande base fois hauteur (l'intervale) sur 2)  
+$$\int_{x_i}^{x_{i+1}} f(x)dx = \frac{h_i}{2}(f_i + f_{i+1}) + E_{loc}(h_i)$$
+> Aire trapèze $= h * (f(a)+f(a+b)) / 2$ (petite base + grande base fois hauteur (l'intervale) sur 2)  
 Plus h est petit, plus c'est précis  
 On risque que  la longueur $[a,b]$ soit pas un nombre entier de fois h,  
 alors $h = (b-a) / n$ avec $n$ le nombre d'intervalles  
 
-**Exacte pour tout polynome de degré au plus 1**  
+[!WARNING]  
+**Exacte pour tout polynome de degré au plus 1** (**Ne veut pas dire que c'est pas applicable, juste que l'erreur ne sera pas nulle**)  
+(pourquoi? : car erreur dépend de la dérivée seconde, donc si au plus degré 1 $\Rightarrow f'' = 0$ donc erreur nulle (globale ou locale), voir point suivant: erreur)  
 
 #### Erreurs:
 $c \in ]x_i,x_{x+1}[$  
-Erreur locale: $E_{loc}(h_i) = -\frac{1}{12}h^3_i f''(c)$  
+**Erreur locale**: $E_{loc}(h_i) = -\frac{1}{12}h^3_i f''(c)$  
 
 $c \in ]a,b[$  
-Erreur globale: $E_{glob}(h) = -\frac{1}{12}(b-a)h^2 f''(c)$
+**Erreur globale**: $E_{glob}(h) = -\frac{1}{12}(b-a)h^2 f''(c)$
 
 #### Algo Octave:
 ```matlab
@@ -657,26 +661,34 @@ endfunction
 ```
 
 ### Methode de Simpson
-Point au milieu de $[a+h,a+2h]$ : $a + \frac{3}{2}h$  
-interpolation quadratique  
-intégrale $= (f(a+h) + h*f(a+\frac{3}{2}h) + f(a+2h)) / 6$  
-**Exact pour tout polynome de degré au plus 3**  
+On s'approche de f par interpolation quadratique  
+> Point au milieu de $[a+h,a+2h]$ : $a + \frac{3}{2}h$  
+> intégrale $= (f(a+h) + h*f(a+\frac{3}{2}h) + f(a+2h)) / 6$  
+
+$$\int_{x_i}^{x_{i+1}}f(x)dx \approx \frac{h_i}{6}(f_i + 4f_{i+1/2} + f_{i+1})$$  
+(voir Newton-Cotes)  
+
+[!WARNING]  
+**Exact pour tout polynome de degré au plus 3** (**Ne veut pas dire que c'est pas applicable, juste que l'erreur ne sera pas nulle**)  
+(pourquoi? : car erreur dépend de la dérivée 4ème, donc si au plus degré 3 $\Rightarrow f^{(4)} = 0$ donc erreur nulle (globale ou locale), voir point suivant: erreur)  
 
 Erreur globale:  
-$|E_{glob}| = -\frac{1}{12} * (b-a)*h^2*|f''(c)|$  
-c est un réel appartenant à $[a,b]$  
+$E_{loc}(h) \sim f^{(4)} h^5$  
+$E_{glob}(h) \sim (b-a) f^{(4)} h^4$  
+> $|E_{glob}| = -\frac{1}{12} * (b-a)*h^2*|f''(c)|$  
+> c est un réel appartenant à $[a,b]$  
+> 
+> $|E_{glob}| \le 10^{-6}$  
+> $h^2*|f''(c)| \le 10^{-6}$  
+> 
+> on va sortir un $h_{erreur} \le sqrt((12*10^-6)/((b-a)*|f''(c)|))$  
+> $n = (b-a)/h_{erreur}$ ; appartient PAS à N  
+> 
+> `n = ceil(n)`  
+> $h_{effetif} = (b-a)/n \le h_{erreur}$  
+> que quand la methode est pas exacte, que quand il y a une erreur à calculer  
 
-$|E_{glob}| <= 10^-6$  
-$h^2*|f''(c)| <= 10^-6$  
-
-on va sortir un $h_{erreur} <= sqrt((12*10^-6)/((b-a)*|f''(c)|))$  
-$n = (b-a)/h_{erreur}$ ; appartient PAS à N  
-
-`n = ceil(n)`  
-$h_{effetif} = (b-a)/n <= h_{erreur}$  
-que quand la methode est pas exacte, que quand il y a une erreur à calculer  
-
-si elle est exacte le h est indépendant de l'erreur (car pas d'erreur) donc h qu'on veut  
+Si l'interpollation de la fonction est exacte (donc si fonction de degré au plus 3) le h est indépendant de l'erreur (car pas d'erreur) donc on peut prendre le h qu'on veut  
 
 #### Algo Octave
 ```matlab
@@ -693,8 +705,14 @@ endfunction
 ```
 
 ### Methode de Newton-Cotes
-...
-
+Pour degrés $n \le 4$  
+On sait retrouver la formule des trapèzes et de Simspon, et leurs erreur globale et locale  
+pour $f$ de degré $n$:  
+$$\int_{x_i}^{x_{i+1}} f(x)dx = h_i(w_i f_i+w_2 f_{i+1/n}+ ... + w_{n+1} f_{i+1})$$  
+où $w_i$ (ici pour les degrés $n \le 4$) :  
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d0d5fdd6-fed8-453f-be9b-5940abf75b50)  
+On peut voir que $n=1$ donne la méthode des trapèzes et que $n=2$ donne Simpson!  
+En plus Newton-Cotes est donné dans le formulaire à l'examen! (mais pas les colonnes avec les erreurs)  
 ### Methode de Romberg
 ...
 
