@@ -192,9 +192,12 @@ $x = U^{-1}L^{-1}(P*b)$ ?
 
 ##### Étapes et Coûts
 (matrice A est $m \times n$)
-1. Former $A^T A$, $A^Tb$ - **coût = $mn^2$ (symétrie) $+ 2mn$ flops**
-2. Calculer la fact LU avec pivot $LU = P(A^T A)$ - **coût = $\frac{2}{3}n^3$ flops**
-3. résoudre $Ly = P(A^T b)$ et $Ux=y$ - **coût = $2n^2$ flops**
+1. Former $A^T A$, $A^Tb$  
+  **coût = $mn^2$ (symétrie) $+ 2mn$ flops**
+2. Calculer la fact LU avec pivot $LU = P(A^T A)$  
+  **coût = $\frac{2}{3}n^3$ flops**
+3. résoudre $Ly = P(A^T b)$ et $Ux=y$  
+  **coût = $2n^2$ flops**
 
 ## Chap 3
 
@@ -263,9 +266,12 @@ $x = \hat{R}^{-1}\hat{Q}^T b$
 
 ##### Étapes et Coûts
 (matrice A est $m \times n$)
-1. Factorisation $\hat{Q}\hat{R}=A$ - **coût = $2n^2(m-\frac{n}{3})$ flops**
-2. Former $\hat{Q}^T b$ - **coût = $4mn$ flops**
-3. Résoudre $\hat{R} x = \hat{Q}^T b$ - **coût = $n^2$ flops**
+1. Factorisation $\hat{Q}\hat{R}=A$  
+  **coût = $2n^2(m-\frac{n}{3})$ flops**
+2. Former $\hat{Q}^T b$  
+  **coût = $4mn$ flops**
+3. Résoudre $\hat{R} x = \hat{Q}^T b$  
+  **coût = $n^2$ flops**
 
 ### Interlude: propriétés Norme Euclidienne
 ? nécessaire ?
