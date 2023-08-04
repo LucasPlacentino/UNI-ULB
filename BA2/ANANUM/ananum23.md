@@ -1,11 +1,11 @@
 # Synthèse Ananum 23
 
 ## Chap 1
-### virgules flottantes
+### Virgules flottantes
 
 $\pm\bar{O.d_{1}d_{2}...d_{t}}.\beta^e = \pm \beta^e\sum{t}{i=1}{\frac{d_{i}}{\beta^i}}$  
 
-### erreur d'arrondi
+### Erreur d'arrondi
 
 u: l'unité d'arrondi  
 $u := \frac{1}{2}\beta^{1-t} \ge \frac{|fl(x)-x|}{|x|}$  
@@ -41,7 +41,7 @@ tq $f(x+ \Delta x) = \widehat{y}$
 
 Sys linéaire $Ax=b$  
 
-### Conditionnement sys liénaire
+### Conditionnement système linéaire
 > #### cas 1
 > perturbations $\delta b$ de $b$  
 > $\kappa = \sup_{||\delta b||}(\frac{||\delta x||/||x||}{||\delta b||/||b||}) \le \frac{||A^{-1}||.||b||}{||x||} = \frac{||A^{-1}||.||Ax||}{||x||} \le ||A^{-1}||.||A||$  
@@ -276,7 +276,7 @@ $x = \hat{R}^{-1}\hat{Q}^T b$
 ### Interlude: propriétés Norme Euclidienne
 ? nécessaire ?
 
-### conditionnement sys surdéterminés
+### Conditionnement systèmes surdéterminés
 ? nécessaire ?
 
 
@@ -298,7 +298,7 @@ $\frac{||r^{(k)}||}{||b||} \le 10^{-3}$ ($10^{-3}$ par exemple ici)
 $\frac{||\widetilde{x}-x||}{||x||} \le k(A) \frac{||r^{(k)}||}{||b||}$  
 
 
-### méthodes stationnaires
+### Méthodes stationnaires
 ### Jacobi
 > matrice tri-diagonale  
 > première ligne, que 1 voisin  
@@ -602,7 +602,7 @@ puis
 [n_iter sol] = algonrrecherchelin(f, fprime, x0) #on peut aussi passer un critère d'arret plutot que de le hardcoder
 ```
 
-### variantes
+### Variantes
 on peut exprimer $f'(x)$ sans le connaitre...  
 - formule de différences finies...  
 - méthode de la sécante...  
@@ -615,7 +615,7 @@ Principe: factorisation LU peut être couteux pour système à taille importante
 Convergence n'est plus quadratique  
 Factorisation fait qu'une seule fois au début de l'algo  
 
-### Critères d'arret
+### Critères d'arrêt
 - **[+]** $||f(x_k)|| \le \epsilon_a$ (ou relativement $||f(x_k)|| \le \epsilon_r||f(x_0)||$)
 - **[-]** nombre max d'itérations
 - **[-]** Pour les méthodes de type Newton, le fait que la dérivée $f'(x_k)$ ou son
@@ -643,7 +643,7 @@ alors $h = (b-a) / n$ avec $n$ le nombre d'intervalles
 **Exacte pour tout polynome de degré au plus 1** (**Ne veut pas dire que c'est pas applicable, juste que l'erreur ne sera pas nulle**)  
 (pourquoi? : car erreur dépend de la dérivée seconde, donc si au plus degré 1 $\Rightarrow f'' = 0$ donc erreur nulle (globale ou locale), voir point suivant: erreur)  
 
-#### Erreurs:
+#### Erreurs
 $c \in ]x_i,x_{x+1}[$  
 **Erreur locale**: $E_{loc}(h_i) = -\frac{1}{12}h^3_i f''(c)$  
 
@@ -678,7 +678,7 @@ $$\int_{x_i}^{x_{i+1}}f(x)dx \approx \frac{h_i}{6}(f_i + 4f_{i+1/2} + f_{i+1})$$
 **Exact pour tout polynome de degré au plus 3** (**Ne veut pas dire que c'est pas applicable, juste que l'erreur ne sera pas nulle**)  
 (pourquoi? : car erreur dépend de la dérivée 4ème, donc si au plus degré 3 $\Rightarrow f^{(4)} = 0$ donc erreur nulle (globale ou locale), voir point suivant: erreur)  
 
-Erreur globale:  
+#### Erreurs  
 $E_{loc}(h) \sim f^{(4)} h^5$  
 $E_{glob}(h) \sim (b-a) f^{(4)} h^4$  
 > $|E_{glob}| = -\frac{1}{12} * (b-a)*h^2*|f''(c)|$  
@@ -696,7 +696,7 @@ $E_{glob}(h) \sim (b-a) f^{(4)} h^4$
 
 Si l'interpollation de la fonction est exacte (donc si fonction de degré au plus 3) le h est indépendant de l'erreur (car pas d'erreur) donc on peut prendre le h qu'on veut  
 
-#### Algo Octave
+#### Algo Octave:
 ```matlab
 function [aire] = tp9simpson(f, a, b, n)
   h = (b-a)/n;
@@ -710,7 +710,7 @@ function [aire] = tp9simpson(f, a, b, n)
 endfunction
 ```
 
-### Methode de Newton-Cotes
+### Méthode de Newton-Cotes
 Pour degrés $n \le 4$  
 On sait retrouver la formule des trapèzes et de Simspon, et leurs erreur globale et locale  
 pour $f$ de degré $n$:  
@@ -719,17 +719,17 @@ où $w_i$ (ici pour les degrés $n \le 4$) :
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d0d5fdd6-fed8-453f-be9b-5940abf75b50)  
 On peut voir que $n=1$ donne la méthode des trapèzes et que $n=2$ donne Simpson!  
 En plus Newton-Cotes est donné dans le formulaire à l'examen! (mais pas les colonnes avec les erreurs)  
-### Methode de Romberg
+### Méthode de Romberg
 ...
 
-## Chap 8 éq différentielles avec cond Initiales  
+## Chap 8 équations différentielles avec Conditions Initiales  
 Prob de Cauchy (scalaire ou vectoriel)
 $$\begin{cases}
 \frac{dy}{dt}(t) = f(t,y(t)), t \in [0,T] \\
 y(0) = y_0
 \end{cases}$$
 
-### Methode d'Euler
+### Méthode d'Euler
 Ordre: 1  
 Un pas de discrétisation: $h_k = t_{k+1}-t_k$  
 (ou pas d"intégration).  
@@ -761,7 +761,7 @@ function [y] = tp10eulerpro (f, y0, t) # t contient t_min et t_max
 endfunction
 ```
 
-#### Euler retrograde
+#### Euler rétrograde
 Méthode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$)  
 Stabilité: **toujours stable**  
 Principe: approcher la dérivée au point $t_{k+1}$ par...  
@@ -807,9 +807,9 @@ La sol exacte est $y(t) = y_0e^{-\beta t}$ elle tend vers 0 pour $\beta>0$ et cr
 
 ex: euler progressive absolument pas stable si $h\beta < >? 2$
 
-### Methode du second ordre
+### Méthode du second ordre
 
-#### Methode de Crank-Nicolson
+#### Méthode de Crank-Nicolson
 Principe: methode s'obtient en approchant l'intégrale par la formule des trapèzes.  
 Methode implicite (pas moyen d'isoler directement $y_{k+1}$ àpd $y_k$).  
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
@@ -822,7 +822,7 @@ où come avant $h_k = t_{k+1} - t_k$
 ##### Algo Octave:
 ?  
 
-#### Methode de Heun (ou Runge-Kutta d'ordre 2)
+#### Méthode de Heun (ou Runge-Kutta d'ordre 2)
 Principe: rendre la methode de Crank-Nicolson explicite sur base de la formule d'Euler progressive.  
 Methode explicite  
 Ordre: 2 ($|y_k-y(t_k)| \propto h^2$)  
@@ -836,9 +836,9 @@ Ce qui la rend donc explicite.
 ##### Algo Octave:
 ?  
 
-### Methode multi-pas
+### Méthode multi-pas
 ...
 
-## Chap 9 éq différentielles avec cond aux Limites
+## Chap 9 équations différentielles avec Conditions aux Limites
 
-croisons les doigts que ça tombe pas à l'exam  
+croisons les doigts que ça tombe pas à l'exam :(  
