@@ -1,9 +1,10 @@
-# Synthèse Ananum 23
-
+# Synthèse Ananum (2023)
+------------------------
 ## Chap 1
 ### Virgules flottantes
 
 $$\pm\overline{0.d_{1}d_{2}...d_{t}}\cdot\beta^e = \pm \beta^e\sum^{t}_{i=1}\frac{d_{i}}{\beta^i}$$  
+
 - $\beta\,$: est la **base** (2=bianire, 10=décimal)
 - $t\,$: est le **nombre de chiffres significatifs**
 - $d_i\,$: est l'**$i$ème chiffre significatif** ($0 \le d_i \le \beta -1$)  
@@ -66,25 +67,28 @@ Système linéaire $Ax=b$
 
 ### Conditionnement système linéaire
 > #### cas 1
-> perturbations $\delta b$ de $b$  
+> Perturbations $\delta b$ de $b$  
 > $\kappa = \sup_{||\delta b||}(\frac{||\delta x||/||x||}{||\delta b||/||b||}) \le \frac{||A^{-1}||.||b||}{||x||} = \frac{||A^{-1}||.||Ax||}{||x||} \le ||A^{-1}||.||A||$  
 > 
 > #### cas 2
-> perturbations $\delta A$ de $A$  
+> Perturbations $\delta A$ de $A$  
 > $\kappa = \sup_{||\delta A||}(\frac{||\delta x||/||x||}{||\delta A||/||A||}) \le ||A^{-1}||.||A||$  
 > 
 
-erreurs dans les données A,b s'un sys linéaire sont amplifiées par (au plus):  
+Erreurs dans les données A,b d'un système linéaire sont amplifiées par (au plus):  
 $\kappa(A) := ||A^{-1}||.||A||$  
-$\kappa(A)$: conditionnement de la matrice A  
+$\kappa(A)$: conditionnement de la matrice $A$  
 
-_en Octave: `cond`_  
+_en Octave: `cond()`_  
 
 ### Factorisation LU
 $LUx=b$ où $Ux=y$  
 (par ex: $L_2L_1Ax=L_2L_1b$ où en fait $L_2L_1A=U$ => $A=LU$)  
 
-`^x = U\(L\b)`  
+`x = U\(L\b)`  
+`L\b` est un système triangulaire (inférieur) (`L` est une matrice triangulaire inférieure et `b` matrice colonne)  
+`U\(L\b)` est un système triangulaire (supérieur) (`U` est une matrice triangulaire supérieure et `(L\b)` matrice colonne)  
+$\Rightarrow$ on peut utiliser donc `\` à l'exam comme ce sont des systèmes triangulaires :D  
 
 #### Algo Octave:
 ```matlab
@@ -129,7 +133,15 @@ $PA=LU$
 - **existe** pour toute matrice régulière
 - réputée **stable en pratique**
 
-Calcul du dét(A)  
+Permet le calcul du dét(A) ($A$ matrice $n\times n$):  
+$\text{det}(A) = \text{det}(U)/\text{det}(P)$  
+$\:= (-1)^p a_{11}^{}(1) \cdot\cdot\cdot a_{nn}^{(n)}$  
+> ($\text{det}(L) = 1$, comme éléments diagonaux $=1$ et matrice triangulaire)  
+> ($\text{det}(U)=$ produit des éléments diagonaux $a_{kk}^{(k)}, k=1,...\,,n$ $\Rightarrow \text{det}(U)= a_{11}^{(1)} \cdot\cdot\cdot a_{nn}^{(n)}$)  
+> ($\text{det}(P_i) = \pm1$, où $-$ si la permutation a effectivement eu lieu, $+$ si on a pas permuté $\Rightarrow \text{det}(P) = (-1)^p$ avec $p$ le nombre de permutations effectuées)  
+> 
+> **Rappel**: pour deux matrices **carrées** $B$, $C$:  
+> $\text{det}(BC)=\text{det}(B)\text{det}(C)$
 
 Permet l'inversion matricielle  
 
