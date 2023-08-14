@@ -443,7 +443,7 @@ Exemple de crit d'arret: $10^{-3}$
 
 
 On peut comparer  
-$\frac{||\~x-x||}{||x||}$ de Jacobi et Gauss-Seidel.  
+$\frac{||\widehat{x}-x||}{||x||}$ de Jacobi et Gauss-Seidel.  
 
 
 ### Minimisation d'énergie
