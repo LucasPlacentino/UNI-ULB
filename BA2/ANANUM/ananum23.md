@@ -458,7 +458,7 @@ $$\alpha = \frac{p^Tr^{(k)}}{p^TAp}$$
 > [!WARNING] 
 > **/!\ système avec A symétrique définie positive**  
 
-L'énergie d'un système est définie par la focntion:  
+L'énergie d'un système est définie par la fonction:  
 $$\begin{align}
 f(x^{(k)}) := ||x-x^{(k)}||^k_A &= (x-x^{(k)})^T A (x-x^{(k)}) \\
 &= x^{(k)T} Ax^{(k)} -2x^{(k)T}Ax + x^TAx \\
