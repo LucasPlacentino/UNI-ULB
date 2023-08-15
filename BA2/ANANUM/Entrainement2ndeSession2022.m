@@ -9,7 +9,7 @@ A = eye(4)-100*diag(ones(3,1),1)+diag(ones(3,1),-1)-100*diag(ones(1,1),-3)
 %b = .......
 
 %function [Q R] = factqr (A)
-  
+
 x=A(:,1); % x est une matrice colonne formée par la première colonne de A
 x(1) = x(1) + sign(x(1))*norm(x); % change le premier element de x
 v1 = x/norm(x); % le vect v1 est le vect x normé
@@ -47,7 +47,7 @@ R = A
 
 # Créer la matrice Q :
 #    Q = Q1*Q2*Q3
-# mais 4x4 3x3 2x2 
+# mais 4x4 3x3 2x2
 # Qi est en fait identité avec en bas à gauche la matrice avec les infos
 
 Q=Q1*Q2*Q3
@@ -63,14 +63,14 @@ Q=Q1*Q2*Q3
 %Q (3:4 ,3:4) -= v3 *(2*( trasnpose(v3) * Q (3:4 ,3:4) )) ;
 %Q (2:4 ,2:4) -= v2 *(2*( transpose(v2) * Q (2:4 ,2:4) ) );
 %Q -= v1 *(2*( trasnpose(v1) * Q) ) ;
-  
+
 %endfunction
 
 
 % === puis pour résoudre prob: ? ====
 % x = R\(Q\b) % // x= U\(L\b)
 % OU ???
-% x = R\Q'*b % ????
+% x = R\(Q'*b) % ????
 
 % test loop:
 
@@ -80,7 +80,7 @@ Q=Q1*Q2*Q3
 #  x = R(k:m,k);
 #  vk = x+sign(x(1))*norm(x)*e1;
 #  vk = vk/norm(vk);
-#  
+#
 #  R(k:m,k:n) = R(k:m,k:n)-vk*(2*(transpose(vk)*R(k:m,k:n)));
 #endfor
 #R
@@ -112,7 +112,7 @@ P1([1,4],:) = P1([4,1],:); % on switch les LIGNES 1 et 4 de P1
 A = P1*A;
 
 %pour les L on va remplacer les éléments de chaque colonne, qui sont
-%en dessous de la diagonale 
+%en dessous de la diagonale
 
 % construction de L1
 L1 = eye(4);
