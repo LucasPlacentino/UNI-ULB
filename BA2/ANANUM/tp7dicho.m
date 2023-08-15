@@ -24,7 +24,7 @@ function [niterations, sol] = tp7dicho(f, a, b, espilon)
       sol = x;
       break
     endif
-    sol = x;
+    sol = x; % !!!!!! devrait pas etre la ?
   endwhile
 endfunction
 

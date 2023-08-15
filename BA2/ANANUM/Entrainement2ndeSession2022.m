@@ -86,14 +86,14 @@ Q=Q1*Q2*Q3
 #R
 
 
-% ---- 1)   Factorisation PA=LU  ------
+% ------------------ 1)   Factorisation PA=LU  ----------------------------
 % voir TP4 ex1 (et TP3 ex3)
 
 % différence avec simple LU ? (LU avec pivotage?)
 % - LU parfois pas possible (pivot sur zéro) alors nécessite pivot => PALU
 % - meme flops que LU
 % - PALU existe pour toute matrice régulière
-% - PALU réputée stable ne pratique
+% - PALU réputée stable en pratique
 
 % A = ? test
 A = eye(4)-100*diag(ones(3,1),1)+diag(ones(3,1),-1)-100*diag(ones(1,1),-3)

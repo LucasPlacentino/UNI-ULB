@@ -10,18 +10,19 @@
 #  y = [y ; y3];
 #endfunction
 
-function [y] = tp12func (m, a, b, f, cl) # fonctionne pour tout m
+% attention, ici 1 CL, donc plutot faire h = 1/(m-1) ? puisqu'on
+function [y] = tp12func (m, a, b, f, cl) # fonctionne pour tout m (nbre de points ou la sol est calculee)
   h = 1/m;
-  
+
   A = diag(-ones(1,m-1),1) + diag(-ones(1,m-1),-1);
   A = A + diag((2+h^2)*ones(1,m),0);
   A(1,1) = 1+(h^2/2);
-  
+
   d(1)= (h^2/2) * f(a);
   for i=1:m-1
     d = [d ; h^2*f(a+i*h)];
   endfor
-  
+
   y = A\d;
   y3 = cl;
   y = [y; y3];
