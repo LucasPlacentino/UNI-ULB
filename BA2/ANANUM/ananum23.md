@@ -5,7 +5,7 @@
 
 $$\pm\overline{0.d_{1}d_{2}...d_{t}}\cdot\beta^e = \pm \beta^e\sum^{t}_{i=1}\frac{d_{i}}{\beta^i}$$  
 
-- $\beta\,$: est la **base** (2=bianire, 10=décimal)
+- $\beta\,$: est la **base** (2=binaire, 10=décimal)
 - $t\,$: est le **nombre de chiffres significatifs**
 - $d_i\,$: est l'**$i$ème chiffre significatif** ($0 \le d_i \le \beta -1$)  
   L'ensemble des chiffres significatifs $\overline{0.d_1d_2...d_t}$ forment la **mantisse**
