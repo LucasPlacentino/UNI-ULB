@@ -10,7 +10,8 @@
 #  y = [y ; y3];
 #endfunction
 
-% attention, ici 1 CL, donc plutot faire h = 1/(m-1) ? puisqu'on
+% attention, ici 1 CL (en y(x)), donc plutot faire h = 1/(m-1) ? puisqu'on rajoute un point (apd la CL) manuellement à la fin de la func ?
+% ducoup si 2 CL en y(x), m-2 ?
 function [y] = tp12func (m, a, b, f, cl) # fonctionne pour tout m (nbre de points ou la sol est calculee)
   h = 1/m;
 
