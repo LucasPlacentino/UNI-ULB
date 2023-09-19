@@ -33,4 +33,6 @@ Personal university files, documents and projects.
 - ### <a href='https://github.com/DemonicTricycle/DemonicTricycle-ELECH309'><ins>↪️ Projet Intégré</ins></a> - ELEC-H309  
   #### "Demonic Tricycle"
   > <i>and https://github.com/lucasplacentino/Project-ELECH309.X for some tests</i>
+- ### <a href="https://github.com/LucasPlacentino/UNI-ULB/tree/main/BA3/MECA-H301"><ins>↪️ Thermodynamique Appliquée/Systèmes énergétiques : principes de bases et technologies durables</ins></a> - MECA-H301  
+  (Notes .md)
   
