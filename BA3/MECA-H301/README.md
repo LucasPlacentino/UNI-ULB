@@ -22,5 +22,13 @@
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/087e412f-d6b0-4c56-983c-d570686155dc)
 
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/b4675368-e469-45d6-9aa6-084c18fe02ef)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/d2fca92d-2939-40b1-8741-03537b6e81bb)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/2c7aa36b-74e1-41e5-a701-51a35a4f8926)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/16e82f48-dbf7-4147-b4c2-8d07d3066e3b)
+
 
 
