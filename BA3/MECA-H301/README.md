@@ -30,5 +30,10 @@
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/16e82f48-dbf7-4147-b4c2-8d07d3066e3b)
 
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/e852bf0d-04a3-4d09-827b-45e872f8327e)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/3405e9ae-3542-4449-9ae8-4bfafd5db1d8)
+
+
 
 
