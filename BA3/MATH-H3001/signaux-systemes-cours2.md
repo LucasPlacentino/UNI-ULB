@@ -145,7 +145,7 @@ $z(t) = \Psi(t) = \varphi(t) +i \psi(t)$ $t_0 \le t \le t_1$
 **voir slide 11, 12, 13 pour exemple**  
 
 Indépendance du chemin ?: _slide 14_  
-> $\int_O^Az^2 \stackrel{?}{=} \int_O^B+\int_O^A$  
+> $\int_O^Az^2 \stackrel{?}{=} \int_O^B+\int_B^A$  
 > faire O->B->A plûtot que O->A  
 
 ### Propriétés
