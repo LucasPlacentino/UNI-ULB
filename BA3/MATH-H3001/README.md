@@ -28,6 +28,27 @@ signaux systemes
 
 ![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/56674c69-5dcd-405b-8a76-eb13220f93b4)
 
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/88f39a0e-7bf5-449c-94c1-ac20b6804f06)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/bbb27370-8241-45ac-b893-cc0766d06cea)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/736afb8d-e562-405e-b2ff-013cdd38f801)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/969b631c-22b8-4f1c-96f4-b18098374766)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/00f7ebbe-4cb2-4ac6-89eb-21e30a3044b8)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/2360479c-2d18-45fa-8ab3-c042db49cefd)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/b68140cb-532b-4cb3-b779-ab6af2b596ce)
+
+![image](https://github.com/LucasPlacentino/UNI-ULB/assets/23436953/3512e43c-5f22-4e19-a8d5-5ac2a7d2ef2c)
+
+
+
+
+
+
 
 
 
