@@ -1,0 +1,32 @@
+* PSpice Model Editor - Version 10.5.0
+*$
+.SUBCKT Ampli_reel plus moins out Vm Vp PARAMS: Ao=30E3 eo=1mV ip=100nA im=100nA Rid=100k Ro=100
+V_eo   plus  1     {eo}
+I_p    1 0         {ip}
+I_m    moins 0     {im}
+E_DIFF1         N1 0 VALUE {V(1,moins)}
+E1     out   0     value { ( V(Vp) + V(Vm) ) / 2 + ( V(Vp) - V(Vm) ) / 2 * 
++TANH( Ao*(V(N1) - ( V(Vp) + V(Vm) )/2) /(( V(Vp) - V(Vm) )/2) )}
+.ENDS
+*$
+.SUBCKT AmpliBW plus moins out Vm Vp PARAMS: Ao=30E3 f1=30Hz f2=200kHz f3=300kHz
+Ein   N1 0 plus moins 1
+R1    N1 N2 1k
+C1    N2 0  {1/(6280*f1)} IC=100pV
+E1    N3 0 N2 0 1
+R2    N3 N4 1k
+C2    N4 0  {1/(6280*f2)}
+E2    N5 0 N4 0 1
+R3    N5 N6 1k
+C3    N6 0  {1/(6280*f3)}
+Eout  out  0     value { ( V(Vp) + V(Vm) ) / 2 + ( V(Vp) - V(Vm) ) / 2 * 
++TANH( Ao*(V(N6) - ( V(Vp) + V(Vm) )/2) /(( V(Vp) - V(Vm) )/2) ) }
+.ENDS
+*$
+.SUBCKT Ampli_parfait plus moins out Vm Vp PARAMS: Ao=30E3 
+E_DIFF1         N1 0 VALUE {V(plus,moins)}
+E_SLIMIT1         out 0 VALUE { ( V(Vp) + V(Vm) ) / 2 + ( V(Vp) - V(Vm) ) / 2 * 
++TANH( Ao*(V(N1) - ( V(Vp) + V(Vm) )/2) /(( V(Vp) - V(Vm) )/2) )}
+.ENDS
+.END
+*$

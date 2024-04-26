@@ -1,0 +1,131 @@
+
+**** 04/26/24 09:49:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu1"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1-PSpiceFiles\SCHEMATIC1\si
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simu1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/sedra_lib.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/small_signal.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/elec-h402.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 20 0.01 
+.STEP LIN V_V2 2 10 2 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LABO1
+M_M1         N14420 N14424 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+V_V1         N14420 0 10Vdc
+V_V2         N14424 0 0Vdc
+
+**** RESUMING simu1.cir ****
+.END
+
+**** 04/26/24 09:49:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu1"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1-PSpiceFiles\SCHEMATIC1\si
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ncg             
+               NMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+          LD    1.600000E-06 
+          WD    1.050000E-06 
+         VTO     .75         
+          KP   40.809880E-06 
+       GAMMA    1.09         
+         PHI     .7          
+      LAMBDA    0            
+         RSH   10            
+          IS   10.000000E-15 
+          JS   20.000000E-06 
+          PB     .9          
+        PBSW     .9          
+          CJ  390.000000E-06 
+        CJSW  264.000000E-12 
+        MJSW     .18         
+        CGSO  940.000000E-12 
+        CGDO  590.000000E-12 
+        CGBO  138.000000E-12 
+        NSUB   10.000000E+15 
+         NSS   70.000000E+09 
+         NFS  117.000000E+09 
+         TOX   55.000000E-09 
+          XJ    2.000000E-06 
+          UO  650            
+       UCRIT    7.000000E+03 
+        UEXP     .1          
+        VMAX  160.000000E+03 
+        NEFF   10            
+         XQC     .42         
+          KF   75.000000E-30 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+
+          JOB CONCLUDED
+
+**** 04/26/24 09:49:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu1"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1-PSpiceFiles\SCHEMATIC1\si
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     V_V2 =   10    
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

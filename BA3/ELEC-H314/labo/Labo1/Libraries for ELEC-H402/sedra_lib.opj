@@ -1,0 +1,71 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\sedra_lib.olb"
+      (Type "Schematic Library"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\PM\Documents PM\Cours\_Analogique\ELEC-H-402 2013-2014\Doc Students\Labos\Libraries for ELEC-H402\sedra_lib.olb"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 372 0 379"))
+      (Tab 0))
+    (Doc
+      (Type "COrPartDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 225 1871 225 744")
+        (PackageScroll "0 0")
+        (PackageZoom "1")
+        (PartPackage "Part")
+        (Scroll "5672 1608")
+        (Zoom "808"))
+      (Path
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\DOC STUDENTS\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (Package "NMOS5P0"))
+    (Doc
+      (Type "COrPartDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 1646 0 519")
+        (PackageScroll "0 0")
+        (PackageZoom "1")
+        (PartPackage "Part")
+        (Scroll "5672 1608")
+        (Zoom "808"))
+      (Path
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\DOC STUDENTS\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (Package "NMOS0P5"))
+    (Doc
+      (Type "COrPartDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1671 25 544")
+        (PackageScroll "0 0")
+        (PackageZoom "1")
+        (PartPackage "Part")
+        (Scroll "5664 1608")
+        (Zoom "808"))
+      (Path
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\DOC STUDENTS\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (Package "PMOS0P5"))
+    (Doc
+      (Type "COrPartDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1696 50 569")
+        (PackageScroll "0 0")
+        (PackageZoom "1")
+        (PartPackage "Part")
+        (Scroll "5664 1608")
+        (Zoom "808"))
+      (Path
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\DOC STUDENTS\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (Package "PMOS5P0")))
+  (MPSSessionName "PM"))

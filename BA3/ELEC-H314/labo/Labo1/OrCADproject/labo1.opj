@@ -1,0 +1,143 @@
+(ExpressProject "labo1"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "C:\Cadence\SPB_17.2\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\Cadence\SPB_17.2\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "labo1.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\labo1-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "..\libraries for elec-h402\sedra_lib.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\libraries for elec-h402\sedra_lib.lib"))
+      (File "..\libraries for elec-h402\small_signal.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\libraries for elec-h402\small_signal.lib"))
+      (File "..\libraries for elec-h402\elec-h402.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\libraries for elec-h402\elec-h402.lib"))
+      (File "..\libraries for elec-h402\ald.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\libraries for elec-h402\ald.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\labo1-pspicefiles\schematic1\bias.sim"
+        (DisplayName "SCHEMATIC1-bias")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\labo1-pspicefiles\schematic1\simu1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\labo1-pspicefiles\schematic1\simu1.sim"
+        (DisplayName "SCHEMATIC1-simu1")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (NMOS
+      (FullPartName "NMOS.Normal")
+      (LibraryName
+         "C:\USERS\LUCASP\REPO\UNI-ULB\BA3\ELEC-H314\LABO\LABO1\LIBRARIES FOR ELEC-H402\ALD.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\Libraries for ELEC-H402")
+  (MPSSessionName "lucasp")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1.dsn")
+      (Path "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1.dsn"
+         "SCHEMATIC1" "PAGE2"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 409"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 1440 78 526")
+        (Scroll "390 298")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\LUCASP\REPO\UNI-ULB\BA3\ELEC-H314\LABO\LABO1\ORCADPROJECT\LABO1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 26 1388 26 474")
+        (Scroll "0 248")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\LUCASP\REPO\UNI-ULB\BA3\ELEC-H314\LABO\LABO1\ORCADPROJECT\LABO1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE2"))))

@@ -1,0 +1,5 @@
+.ALIASES
+M_M1            M1(d=N14420 g=N14424 s=0 b=0 ) CN @LABO1.SCHEMATIC1(sch_1):INS14307@ALD.NMOS.Normal(chips)
+V_V1            V1(+=N14420 -=0 ) CN @LABO1.SCHEMATIC1(sch_1):INS14344@SOURCE.VDC.Normal(chips)
+V_V2            V2(+=N14424 -=0 ) CN @LABO1.SCHEMATIC1(sch_1):INS14360@SOURCE.VDC.Normal(chips)
+.ENDALIASES

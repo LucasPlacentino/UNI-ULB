@@ -1,0 +1,24 @@
+** Profile: "SCHEMATIC1-simu1"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1-PSpiceFiles\SCHEMATIC1\simu1.sim ] 
+
+** Creating circuit file "simu1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/sedra_lib.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/small_signal.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/elec-h402.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 20 0.01 
+.STEP LIN V_V2 2 10 2 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

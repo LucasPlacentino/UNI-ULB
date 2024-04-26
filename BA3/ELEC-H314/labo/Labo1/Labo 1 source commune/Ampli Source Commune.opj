@@ -1,0 +1,147 @@
+(ExpressProject "Ampli Source Commune"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "E:\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\ampli source commune.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\ampli source commune-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\ampli source commune-pspicefiles\schematic1\bias.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ampli source commune-pspicefiles\schematic1\bias.sim"
+        (DisplayName "SCHEMATIC1-BIAS")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "..\libraries for elec-h402\ald.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\libraries for elec-h402\ald.lib"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (NMOS
+      (FullPartName "NMOS.Normal")
+      (LibraryName
+         "F:\DOCUMENTS\ORCAD_TUTORIALS\TUTO - BIBLIOTHEQUE INTROUVABLE\ALD.OLB")
+      (DeviceIndex "0"))
+    (NMOS5P0
+      (FullPartName "NMOS5P0.Normal")
+      (LibraryName
+         "C:\USERS\LABO\DESKTOP\402\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName "E:\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "E:\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "E:\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (CAPACITOR
+      (FullPartName "CAPACITOR.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\EVALAA.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (RESISTOR
+      (FullPartName "RESISTOR.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\EVALAA.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "E:\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Users\labo\Desktop\402\Libraries for ELEC-H402")
+  (MPSSessionName "lucasp")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\Labo 1 source commune\ampli source commune.dsn")
+      (Path "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\Labo 1 source commune\ampli source commune.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\Labo 1 source commune\ampli source commune.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 0 575 -8 -31 0 435 0 522"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1414 52 500")
+        (Scroll "393 614")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\LUCASP\REPO\UNI-ULB\BA3\ELEC-H314\LABO\LABO1\LABO 1 SOURCE COMMUNE\AMPLI SOURCE COMMUNE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

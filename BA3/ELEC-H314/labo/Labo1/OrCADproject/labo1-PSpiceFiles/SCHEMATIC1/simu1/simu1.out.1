@@ -1,0 +1,90 @@
+
+**** 04/26/24 08:41:59 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu1"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\OrCADproject\labo1-PSpiceFiles\SCHEMATIC1\si
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simu1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/sedra_lib.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/small_signal.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/elec-h402.lib" 
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 10 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LABO1
+M_M1         N14420 N14424 N14416 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+V_V1         N14420 0 10Vdc
+V_V2         N14424 0 0Vdc
+
+**** RESUMING simu1.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file sedra_lib.ind for library file sedra_lib.lib.
+
+INFO(ORPSIM-15422): Making new index file sedra_lib.ind for library file sedra_lib.lib.
+
+Index has 13 entries from 1 file(s).
+
+INFO(ORPSIM-15423): Unable to find index file small_signal.ind for library file small_signal.lib.
+
+INFO(ORPSIM-15422): Making new index file small_signal.ind for library file small_signal.lib.
+
+Index has 160 entries from 1 file(s).
+
+WARNING(ORPSIM-15223): Library file "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\libraries for elec-h402\ELEC-H402.lib" has changed since index file elec-h402.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Thu Oct 27 10:57:32 2011 to Fri Mar 29 00:12:15 2024.
+
+INFO(ORPSIM-15422): Making new index file elec-h402.ind for library file elec-h402.lib.
+
+Index has 3 entries from 1 file(s).
+
+WARNING(ORPSIM-15223): Library file "C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\libraries for elec-h402\ald.lib" has changed since index file ald.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Fri Feb 19 10:26:42 2016 to Fri Mar 29 00:12:15 2024.
+
+INFO(ORPSIM-15422): Making new index file ald.ind for library file ald.lib.
+
+Index has 16 entries from 1 file(s).
+
+
+INFO(ORPSIM-15423): Unable to find index file nomd.ind for library file nomd.lib.
+
+INFO(ORPSIM-15422): Making new index file nomd.ind for library file nomd.lib.
+
+Index has 34104 entries from 205 file(s).
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N14416.
+

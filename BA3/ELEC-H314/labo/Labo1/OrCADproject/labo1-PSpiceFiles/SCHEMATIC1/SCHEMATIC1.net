@@ -1,0 +1,13 @@
+* source LABO1
+M_M1         N14420 N14424 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+V_V1         N14420 0 10Vdc
+V_V2         N14424 0 0Vdc

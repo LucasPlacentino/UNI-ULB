@@ -1,0 +1,70 @@
+
+**** 04/26/24 10:28:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ C:\Users\lucasp\repo\UNI-ULB\BA3\ELEC-H314\labo\Labo1\Labo 1 source commune\ampli source commune-ps
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/lucasp/repo/UNI-ULB/BA3/ELEC-H314/labo/Labo1/libraries for elec-h402/ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SOURCE COMMUNE
+V_VDD         VDD 0 10V
+R_RD         OUT VDD ???
+------------------------$
+ERROR(ORPSIM-16407): Missing model
+R_R1         N14456 VDD 7.56Meg
+R_R2         0 N14456 2.44Meg
+V_V1         IN 0  AC 1V
++SIN 0 {Vin} 10kHz 0 0 0
+C_C1         N14456 IN 900p TC=0
+C_C2         OUT N18848  100u  TC=0,0 
+R_RL         0 N18848  {RLval} TC=0,0 
+V_VGS         N20556 0 1V
+M_M1         OUT N14456 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         VDD N20556 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+.PARAM  vin=1v rlval=1000meg
+
+**** RESUMING BIAS.cir ****
+.END
+

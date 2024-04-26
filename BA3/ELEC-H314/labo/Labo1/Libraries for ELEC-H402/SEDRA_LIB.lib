@@ -1,0 +1,155 @@
+*	Model Library for the SPICE Examples
+*	Microelectronic Circuits
+*	Sedra & Smith
+*	5th Edition
+*	
+*	CD Release 2 (January 2004)
+*
+*	Update to CD Release 1:	Corrected the values of the model parameters
+*				for parts NMOS0P5 and PMOS0P5 to match 
+*				those given in Table 4.8 (p.335) and used 
+*				in the SPICE Examples of the textbook.
+*
+*
+*$
+* Model for uA741 Op Amp (from EVAL library in PSpice)
+* connections:   non-inverting input
+*                | inverting input
+*                | | positive power supply
+*                | | | negative power supply
+*                | | | | output
+*                | | | | |
+*
+.subckt uA741    1 2 3 4 5
+*
+c1   11 12 8.661E-12
+c2    6  7 30.00E-12
+dc    5 53 dy
+de   54  5 dy
+dlp  90 91 dx
+dln  92 90 dx
+dp    4  3 dx
+egnd 99  0 poly(2),(3,0),(4,0) 0 .5 .5
+fb    7 99 poly(5) vb vc ve vlp vln 0 10.61E6 -1E3 1E3 10E6 -10E6
+ga    6  0 11 12 188.5E-6
+gcm   0  6 10 99 5.961E-9
+iee  10  4 dc 15.16E-6
+hlim 90  0 vlim 1K
+q1   11  2 13 qx
+q2   12  1 14 qx
+r2    6  9 100.0E3
+rc1   3 11 5.305E3
+rc2   3 12 5.305E3
+re1  13 10 1.836E3
+re2  14 10 1.836E3
+ree  10 99 13.19E6
+ro1   8  5 50
+ro2   7 99 100
+rp    3  4 18.16E3
+vb    9  0 dc 0
+vc    3 53 dc 1
+ve   54  4 dc 1
+vlim  7  8 dc 0
+vlp  91  0 dc 40
+vln   0 92 dc 40
+.model dx D(Is=800.0E-18 Rs=1)
+.model dy D(Is=800.00E-18 Rs=1m Cjo=10p)
+.model qx NPN(Is=800.0E-18 Bf=93.75)
+.ends
+*$
+* 		Model for 1N4148 Diode (from EVAL library in PSpice)
+.model	D1N4148	D(Is=2.682n N=1.836 Rs=.5664 Ikf=44.17m Xti=3 Eg=1.11 Cjo=4p
++               M=.3333 Vj=.5 Fc=.5 Isr=1.565n Nr=2 Bv=100 Ibv=100u Tt=11.54n)
+*$
+*		Model for ECL BJT (used in Chapter 11)
+.model	QECL	NPN(Is=0.26fA Bf=100 Br=1 Tf=0.1ns Cje=1pF Cjc=1.5pF Va=100)
+*$
+* 		Model for MJE253 Power PNP BJT (from ON Semiconductor)
+.model	QMJE253	PNP(IS=2.52937e-13 BF=54.36 NF=1.01478 VAF=4.91894 
++		IKF=0.84154 ISE=6.32316e-13 NE=3.6001 BR=3.71504 
++		NR=1.15303 VAR=49.1894 IKR=4.42705 ISC=6.32316e-13 
++		NC=2.93783 RB=417.673 IRB=7.10249e-06 RBM=0.000992345 
++		RE=6.68257e-05 RC=0.262081 XTB=1.32735 XTI=0.01 
++		EG=1.05 CJE=1.57797e-10 VJE=0.99 MJE=0.339209 
++		TF=2.58603e-09 XTF=1.5 VTF=0.999999 ITF=1 
++		CJC=6.54856e-11 VJC=0.0328604 MJC=0.208693 XCJC=0.8 
++		FC=0.532891 CJS=0 VJS=0.75 MJS=0.5 
++		TR=7.83777e-07 PTF=0 KF=0 AF=1) 
+*$
+*		Model for MJE243 Power NPN BJT (from ON Semiconductor)
+.model	QMJE243	NPN(IS=1.27357e-12 BF=188.792 NF=1.05658 VAF=13.5417 
++		IKF=0.442678 ISE=1e-16 NE=4 BR=1.73115 
++		NR=1.04113 VAR=135.417 IKR=1.00889 ISC=1e-16 
++		NC=2.93725 RB=193.999 IRB=5.29235e-05 RBM=0.000841015 
++		RE=9.44257e-05 RC=0.216999 XTB=1.16682 XTI=0.80411 
++		EG=1.05 CJE=2.19516e-10 VJE=0.99 MJE=0.39332 
++		TF=1.51916e-09 XTF=1.21445 VTF=11.3491 ITF=0.0098534 
++		CJC=7.43909e-11 VJC=0.4 MJC=0.287382 XCJC=0.799998 
++		FC=0.577401 CJS=0 VJS=0.75 MJS=0.5 
++		TR=7.76174e-07 PTF=0 KF=0 AF=1) 
+*$
+* 		Model for 2N3906 PNP BJT (from Eval library in Pspice)
+.model	Q2N3906	PNP(Is=1.41f Xti=3 Eg=1.11 Vaf=18.7 Bf=180.7 Ne=1.5 Ise=0
++		Ikf=80m Xtb=1.5 Br=4.977 Nc=2 Isc=0 Ikr=0 Rc=2.5 Cjc=9.728p
++		Mjc=.5776 Vjc=.75 Fc=.5 Cje=8.063p Mje=.3677 Vje=.75 Tr=33.42n
++		Tf=179.3p Itf=.4 Vtf=4 Xtf=6 Rb=10)
+*$
+*		Model for 2N3904 NPN BJT (from Eval library in Pspice)
+.model	Q2N3904	NPN(Is=6.734f Xti=3 Eg=1.11 Vaf=74.03 Bf=416.4 Ne=1.259
++		Ise=6.734f Ikf=66.78m Xtb=1.5 Br=.7371 Nc=2 Isc=0 Ikr=0 Rc=1
++		Cjc=3.638p Mjc=.3085 Vjc=.75 Fc=.5 Cje=4.493p Mje=.2593 Vje=.75
++		Tr=239.5n Tf=301.2p Itf=.4 Vtf=4 Xtf=2 Rb=10)
+*$
+* 		Level-1 Model for the 5-um PMOS Transistor (Part PMOS5P0)
+*		(created by Anas Hamoui & Olivier Trescases)
+.model	PMOS5P0	PMOS(Level=1 VTO=-1 GAMMA=0.65 PHI=0.65 
++		LD=0.6E-06 WD=0 UO=250 LAMBDA=0.01 TOX=85E-9 PB=0.7 CJ=0.18E-3 
++		CJSW=0.6E-9 MJ=0.5 MJSW=0.5 CGDO=0.4E-9 JS=1E-6 CGBO=0.2E-9
++		CGSO=0.4E-9)
+*$
+* 		Level-1 Model for the 5-um NMOS Transistor (Part NMOS5P0)
+*		(created by Anas Hamoui & Olivier Trescases)
+.model	NMOS5P0	NMOS(Level=1 VTO=1 GAMMA=1.4 PHI=0.7 
++		LD=0.7E-06 WD=0 UO=750 LAMBDA=0.01 TOX=85E-9 PB=0.7 CJ=0.4E-3 
++		CJSW=0.8E-9 MJ=0.5 MJSW=0.5 CGDO=0.4E-9 JS=1E-6 CGBO=0.2E-9
++		CGSO=0.4E-9)
+*$
+* 		Level-1 Model for the 0.5-um PMOS Transistor (Part PMOS0P5)
+* 		(created by Anas Hamoui & Olivier Trescases)
+.model	PMOS0P5	PMOS(Level=1 VTO=-0.7 GAMMA=0.45 PHI=0.75 
++		LD=0 WD=0 UO=115 LAMBDA=0.01 TOX=9.5E-9 PB=0.9 CJ=0.93E-3 
++		CJSW=170E-12 MJ=0.5 MJSW=0.35 JS=5E-9 
++		KP=4e-6)
+*$
+* 		Level-1 Model for the 0.5-um NMOS Transistor (Part NMOS0P5)
+* 		(created by Anas Hamoui & Olivier Trescases)
+.model	NMOS0P5	NMOS(Level=1 VTO=0.7 GAMMA=0.5 PHI=0.8 
++		LD=0 WD=0 UO=460 LAMBDA=0.01 TOX=9.5E-9 PB=0.9 CJ=0.57E-3 
++		CJSW=120E-12 MJ=0.5 MJSW=0.4  JS=10E-9 
++		KP=16E-6)
+*$
+* Model for Nonlinear Transformer with Center-Tapped Secondary
+* (used in Chapter 3)
+.subckt TX 1 2 3 4 5 Params: 
+Lp 2 1 10mH
+Ls1 3 4 52uH
+Ls2 4 5 52uH
+K1 Lp Ls1 0.999
+K2 Lp Ls2 0.999
+K3 Ls1 Ls2 0.999
+.ends TX
+*$
+* Model for Zener Diode (used in Chapter 3)
+.SUBCKT zener_diode 1 2
+*connections:       | |
+*	       andode |
+*		cathode
+Dforward 1 2 1mA_diode
+Dreverse 2 4 ideal_diode
+Vz0 4 3 DC 4.9V
+Rz 1 3 10
+* diode model statements
+.model 1mA_diode D (Is=100pA n=1.679)
+.model ideal_diode D (Is=100pA n=0.01)
+.ends zener_diode
+*$

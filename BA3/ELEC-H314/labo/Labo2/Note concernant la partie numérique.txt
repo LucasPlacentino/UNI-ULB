@@ -1,0 +1,1 @@
+Seul l'exercice 1 "Transformation bilinéaire" fait partie de la matière du labo du cours ELECH314. La partie "Synthèse d'un filtre numérique passe-bas" est donnée dans le corrigé uniquement pour information (ne fait pas partie de la matière d'examen).

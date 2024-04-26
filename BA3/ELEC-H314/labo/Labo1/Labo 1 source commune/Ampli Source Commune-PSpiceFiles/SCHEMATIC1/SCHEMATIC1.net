@@ -1,0 +1,32 @@
+* source AMPLI SOURCE COMMUNE
+V_VDD         VDD 0 10V
+R_RD         OUT VDD ???
+R_R1         N14456 VDD 7.56Meg
+R_R2         0 N14456 2.44Meg
+V_V1         IN 0  AC 1V
++SIN 0 {Vin} 10kHz 0 0 0
+C_C1         N14456 IN 900p TC=0
+C_C2         OUT N18848  100u  TC=0,0 
+R_RL         0 N18848  {RLval} TC=0,0 
+V_VGS         N20556 0 1V
+M_M1         OUT N14456 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         VDD N20556 0 0 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+.PARAM  vin=1v rlval=1000meg
