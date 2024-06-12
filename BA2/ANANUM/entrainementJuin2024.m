@@ -252,17 +252,17 @@ printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 
 % Faire un mesh:
 
-F = @(x) [x(1).^2 - x(2) - 1; (x(1)-2).^2 + (x(2)-0.5).^2 - 1]
-%Fp = @(x) [2.*x(1),-1; 2.*(x(1)-2), 2.*x(2)-1]
-X = -1:0.1:3;
-Y = -1:0.1:3;
-for i = 1:length(X)
-  for j = 1:length(Y)
-    Z(i,j) = min(norm(F([X(i);Y(j)])),1); % ou min( ,0.5)
-  endfor
-endfor
-mesh(X,Y, Z) % (set(gca,'Zlim',[-0.5,0.5]) dans command window)
-xlabel ("x"); ylabel ("y"); zlabel ("z")
+##F = @(x) [x(1).^2 - x(2) - 1; (x(1)-2).^2 + (x(2)-0.5).^2 - 1]
+##%Fp = @(x) [2.*x(1),-1; 2.*(x(1)-2), 2.*x(2)-1]
+##X = -1:0.1:3;
+##Y = -1:0.1:3;
+##for i = 1:length(X)
+##  for j = 1:length(Y)
+##    Z(i,j) = min(norm(F([X(i);Y(j)])),1); % ou min( ,0.5)
+##  endfor
+##endfor
+##mesh(X,Y, Z) % (set(gca,'Zlim',[-0.5,0.5]) dans command window)
+##xlabel ("x"); ylabel ("y"); zlabel ("z")
 
 % puis on peut faire les Newton-Raphson avec x0 = [x,y] approximatif trouvés
 % visuellement avec le mesh
@@ -272,11 +272,11 @@ xlabel ("x"); ylabel ("y"); zlabel ("z")
 %% 6 --- integration ---
 
 % Trapèzes (Newton-Cotes d'ordre 1 en gros):
-f = @(x) [];
-a=
-b=
-ni=  % nombre de sous-intervalles (entier > 0)
-val = entrainementTrapezes2024(f,a,b,ni)
+%f = @(x) [];
+%a=
+%b=
+%ni=  % nombre de sous-intervalles (entier > 0)
+%val = entrainementTrapezes2024(f,a,b,ni)
 
 % E_glob = (-1/12) * (b-a) * h^2 * f''(c)     où c appartient à ]a,b[
 % mais c ? on prend majorant, selon la fonction
