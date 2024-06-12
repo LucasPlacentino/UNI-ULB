@@ -171,13 +171,33 @@ printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 
 %% 4 --- methode stationnaire ---
 % Jacobi, Gauss-Seidel, ...
+% Ax=b
 
+% Jacobi (pour un sys tridiagonal):
+%A=
+%b=
+%tol = 1e-3 % tolerance
+%maxit = 500 % nbre max d'iterations
+%x0 = zeros(length(b),1) % approx initiale
+
+%[x iter rr] = entrainementJacobi2024(A,b,tol,maxit,x0)
+
+
+% Gauss-Seidel (pour un sys tridiagonal):
+
+%A=
+%b=
+%tol = 1e-3
+%maxit = 500
+%x0 = zeros(length(b),1)
+
+%[x iter rr] = entrainementGaussSeidel2024(A,b,tol,maxit,x0)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4bis --- methode de minimisation d'énergie ---
-% minimisation d'énergie, gradient, (gradient conjugué?,) ...
+% minimisation d'énergie, gradient, (gradient conjugué?,..
 
 
 
@@ -185,14 +205,85 @@ printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 
 
 %% 5 --- racines ---
+% dichotomie, fausse position, Newton-Raphson sans ou avec recherche linéaire
 
+% Si on connait pas les dérivées de la fonction, on ne peut utiliser que
+% les méthodes de dichotomie et de fausse position
+
+% Dichotomie:
+%x =
+%f = @(x) []
+%a=
+%b=
+%tol=
+
+%[x iter] = entrainementDico2024(f,a,b,tol) % algo facile
+
+
+% Fausse position:
+%x =
+%f = @(x) []
+%a=
+%b=
+%tol=
+
+%[x iter] = entrainementFaussePosition2024(f,a,b,res,maxit)
+% algo: x = a - f(a)*(b-a)/(f(b)-f(a)) puis on change x en a ou b en fonction
+
+
+% Si on connait (ou peut trouver) la dérivée de la fonction, on peut utiliser
+% les méthodes de Newton-Raphson (avec ou sans recherche linéaire)
+
+% Newton-Raphson (sans rechlin):
+% Voir formulaire exam
+% Voir tp7newtonraphson.m
+%[x iter r] = tp7nrrecherchelin(f, fp, x0, res, maxit)
+
+% Newton-Raphson avec recherche linéraire:
+% Voir forumailre exam
+% Voir tp7nrrecherchelin.m
+%[x iter r] = tp7nrrecherchelin(f, fp, x0, res, maxit)
 
 
 %%%%%%%%%%%%%%%%%%
 
 
+% Faire un mesh:
+
+F = @(x) [x(1).^2 - x(2) - 1; (x(1)-2).^2 + (x(2)-0.5).^2 - 1]
+%Fp = @(x) [2.*x(1),-1; 2.*(x(1)-2), 2.*x(2)-1]
+X = -1:0.1:3;
+Y = -1:0.1:3;
+for i = 1:length(X)
+  for j = 1:length(Y)
+    Z(i,j) = min(norm(F([X(i);Y(j)])),1); % ou min( ,0.5)
+  endfor
+endfor
+mesh(X,Y, Z) % (set(gca,'Zlim',[-0.5,0.5]) dans command window)
+xlabel ("x"); ylabel ("y"); zlabel ("z")
+
+% puis on peut faire les Newton-Raphson avec x0 = [x,y] approximatif trouvés
+% visuellement avec le mesh
+
+
 
 %% 6 --- integration ---
+
+% Trapèzes (Newton-Cotes d'ordre 1 en gros):
+f = @(x) [];
+a=
+b=
+ni=  % nombre de sous-intervalles (entier > 0)
+val = entrainementTrapezes2024(f,a,b,ni);
+
+
+
+
+% Simpson (Newton-Cotes d'ordre 2):
+
+
+
+% Newton-Cotes:
 
 
 

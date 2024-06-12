@@ -9,9 +9,10 @@
 
 # ...
 
-function [niterations, sol] = tp7dicho(f, a, b, espilon)
+function [niterations, sol] = tp7dicho(f, a, b, epsilon) % epsilon = tolerance
+  % f(a)*f(b) doit etre < 0 (condition de "bracketing")
   niterations = 0;
-  while abs(a-b) > espilon & niterations < 69
+  while abs(a-b) > epsilon & niterations < 69
     niterations++;
     x = (a + b)/2;
     if f(a)*f(x) < 0
@@ -22,7 +23,7 @@ function [niterations, sol] = tp7dicho(f, a, b, espilon)
     endif
     if f(x) < 10^(-6) # plutot que f(x(k)) == 0 car précision
       sol = x;
-      break
+      break % ou return
     endif
     sol = x; % !!!!!! devrait pas etre la ?
   endwhile
