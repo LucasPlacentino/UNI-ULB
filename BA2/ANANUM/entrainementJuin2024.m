@@ -105,6 +105,8 @@ printf("norm(P-p) = %g\n", norm(P-p))
 % soit
 %x = U\(L\(P*b)) % on peut utiliser "\" car triangulaire (n^2 flops pour chaque "\")
 
+%x = U\(L\(P*(A’*b))); % ??
+
 %%%%%%%%%%%%%%%
 
 
@@ -274,25 +276,70 @@ f = @(x) [];
 a=
 b=
 ni=  % nombre de sous-intervalles (entier > 0)
-val = entrainementTrapezes2024(f,a,b,ni);
+val = entrainementTrapezes2024(f,a,b,ni)
 
-
+% E_glob = (-1/12) * (b-a) * h^2 * f''(c)     où c appartient à ]a,b[
+% mais c ? on prend majorant, selon la fonction
+% si on a une erreur max => on veut un certain h, on prend alors comme ni
+% à mettre en arg de la function: ni = ceil((b-a)/h)
 
 
 % Simpson (Newton-Cotes d'ordre 2):
+% exacte pour tout polynome de degré inférieur à 3, car erreur dépend de la dérivée 4ème
+%f = @(x) [];
+%a=
+%b=
+%ni=  % nombre de sous-intervalles (entier > 0)
+%val = entrainementSimpson2024(f,a,b,ni)
 
+% E_glob ~= (b-a) * h^4 * f''''(c)
 
 
 % Newton-Cotes:
-
+% voir formule dans le formulaire :)
 
 
 %%%%%%%%%%%%%%%%%%%%%%
 
 
 %% 7 --- equadiff CI ---
+% Méthodes d'Euler progressive, rétrograde, ou du second ordre: de Crank-Nicolson, de Heun (Runge-Kutta 2)
+
+% Euler progressive:
+% methode explicite
+% absolument stable si h*beta > 2
+f = @(t,y) [y.*cos(t)+sin(y)]
+y0=1
+h=0.01
+t=0:h:10
+
+y_pro = entrainementEulerPro2024(f,y0,t)
+
+plot(t,y_pro,'b')
+hold on
 
 
+% Euler rétrograde:
+% methode implicite (on devra utiliser fsolve)
+% toujours absolument stable
+y_ret = entrainementEulerRet2024(f,y0,t)
+
+plot(t,y_ret,'r')
+hold on
+
+% Crank-Nicolson:
+% implicite
+% absolument stable quel que soit le pas h (comme Euler ret)
+
+% Heun (Runge-Kutta d'ordre 2):
+% explicite
+% absolument stable si h*beta < 2 (comme Euler pro) (si beta réel)
+% y_k+1 = y_k + 1/2 * h_k * ( f(t_k,y_k) + f(t_k+1, y_k + h_k*f(t_k,y_k) ) )
+
+y_heun = entrainementHeun2024(f,y0,t)
+
+plot(t,y_heun,'g')
+hold on
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
