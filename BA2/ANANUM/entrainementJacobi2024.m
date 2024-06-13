@@ -5,7 +5,7 @@
 function [x iter rr] = entrainementJacobi2024 (A, b, tol, maxit, x0)
 
   n = length(b);
-  x = zeros(n,1);
+  x = zeros(n,1); % différence avec Gauss-Seidel ?
 
   for iter = 1:maxit
 
@@ -18,7 +18,7 @@ function [x iter rr] = entrainementJacobi2024 (A, b, tol, maxit, x0)
     endfor
 
     x(n) = (b(n) - A(n,n-1)*x0(n-1)) / A(n,n);
-    x0 = x;
+    x0 = x; % différence avec Gauss-Seidel, ici on met x0 = x
 
     % calcul du residu
     r = b - A*x; % résidu

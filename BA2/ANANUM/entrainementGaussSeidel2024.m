@@ -5,7 +5,7 @@
 function [x iter rr] = entrainementGaussSeidel2024 (A, b, tol, maxit, x0)
 
   n = length(b);
-  x = x0;
+  x = x0; % différence avec Jacobi ?: on a x0 en arg de la funcs
 
   for iter = 1:maxit
 
@@ -17,7 +17,8 @@ function [x iter rr] = entrainementGaussSeidel2024 (A, b, tol, maxit, x0)
 
     endfor
 
-    x(n) = (b(n) - A(n, n-1)*x0(n-1)) / A(n,n);
+    x(n) = (b(n) - A(n,n-1)*x0(n-1)) / A(n,n);
+    % différence avec Jacobi, on fait pas x0=x
 
     % calcul du residu
     r = b - A*x; % résidu
