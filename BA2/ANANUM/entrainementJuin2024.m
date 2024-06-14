@@ -313,7 +313,7 @@ printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 
 
 %% 7 --- equadiff CI ---
-% Méthodes d'Euler progressive, rétrograde, ou du second ordre: de Crank-Nicolson, de Heun (Runge-Kutta 2)
+% Méthodes d'Euler progressive, rétrograde, ou du second ordre: de Crank-Nicolson, de Heun (Runge-Kutta d'ordre 2)
 
 % Euler progressive:
 % ordre 1
@@ -331,7 +331,7 @@ hold on
 
 
 % Euler rétrograde:
-% ordre 2
+% ordre 1
 % methode implicite (on devra utiliser fsolve)
 % toujours absolument stable
 y_ret = entrainementEulerRet2024(f,y0,t)
@@ -340,6 +340,7 @@ plot(t,y_ret,'r')
 hold on
 
 % Crank-Nicolson:
+% ordre 2
 % implicite
 % absolument stable quel que soit le pas h (comme Euler ret)
 
