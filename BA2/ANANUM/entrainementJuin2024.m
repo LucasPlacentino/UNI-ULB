@@ -40,7 +40,7 @@ A=P1*A
 
 % construction de L1:
 L1 = eye(4)
-L1(2:4,1) = -A(2:4,1)./A(1,1);
+L1(2:4,1) = -A(2:4,1)./A(1,1); % - colonne 1, lignes 2 à 4 sur élément de la diag
 
 A=L1*A
 
@@ -55,7 +55,7 @@ A=P2*A
 
 % construction de L2:
 L2 = eye(4)
-L2(3:4,2) = -A(3:4,2)./A(2,2);
+L2(3:4,2) = -A(3:4,2)./A(2,2); % - colonne 2, lignes 3 à 4 sur élément de la diag
 
 A=L2*A
 
@@ -157,7 +157,17 @@ Q(1:4,1:4) -= v1*(2*(v1'*Q(1:4,1:4)))
 printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 
 % pour solution
+% Ax = b
+% QRx= b
+% Rx = Q'*b (Q est orthogonal donc Q' = Q^-1)
+% x  = R\(Q'*b)
 %x = R\(Q'*b)
+
+% si A'x = b
+% (AB)' = B'A'
+% donc R'Q'x = b
+% Q'x = R'\b % attention R est pas orthogonal donc on doit laisser \
+% x = Q*(R'\b) (ou x = Q'\(R'\b) mais (Q')^-1 = (Q')' donc = Q)
 
 %%%%%%%%%%%%%
 
