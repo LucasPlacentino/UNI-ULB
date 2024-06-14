@@ -316,6 +316,7 @@ printf("norm(Asv - Q*R) = %g\n", norm(Asv-Q*R))
 % Méthodes d'Euler progressive, rétrograde, ou du second ordre: de Crank-Nicolson, de Heun (Runge-Kutta 2)
 
 % Euler progressive:
+% ordre 1
 % methode explicite
 % absolument stable si h*beta > 2
 f = @(t,y) [y.*cos(t)+sin(y)]
@@ -330,6 +331,7 @@ hold on
 
 
 % Euler rétrograde:
+% ordre 2
 % methode implicite (on devra utiliser fsolve)
 % toujours absolument stable
 y_ret = entrainementEulerRet2024(f,y0,t)
@@ -342,6 +344,7 @@ hold on
 % absolument stable quel que soit le pas h (comme Euler ret)
 
 % Heun (Runge-Kutta d'ordre 2):
+% ordre 2
 % explicite
 % absolument stable si h*beta < 2 (comme Euler pro) (si beta réel)
 % y_k+1 = y_k + 1/2 * h_k * ( f(t_k,y_k) + f(t_k+1, y_k + h_k*f(t_k,y_k) ) )
@@ -355,7 +358,7 @@ hold on
 
 
 %% 8 --- equadiff CL ---
-
+% rip, c'est souvent qu'en seconde sess
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
