@@ -1,6 +1,6 @@
 % entrainementEulerRet2024
 
-% implicite, on doit utiliser fsolve()
+% implicite, et on doit utiliser fsolve()
 
 function y = entrainementEulerRet2024 (f,y0,t)
 
