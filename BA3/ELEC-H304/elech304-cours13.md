@@ -27,7 +27,7 @@ On va vu qu'une onde peut subir un réflexion totale (il n'y a que l'échauffeme
 
 ![alt text](image-178.png)  
 **Toutes les ondes ne puevent pas de propager dans un guide**.  
-$\Rightarrow$ Un solution des éq de MAxwell pouvant se propager (càd satisfaisant les conditions limites) = un **mode**.  
+$\Rightarrow$ Un solution des éq de Maxwell pouvant se propager (càd satisfaisant les conditions limites) = un **mode**.  
 
 Juste mettre une antenne dans un tuyau va pas d'office fonctionner. Il faut que la fréquence de l'onde soit adaptée à la taille du guide d'onde.  
 Un guide peut être "**bloquant**", rien se propage.  
@@ -35,7 +35,7 @@ Un guide peut être "**passant**", un **mode** se propage.
 
 ![alt text](image-179.png)  
 Fréquence minimale = **fréquence de coupure** : pour qu'un mode se propage dans le guide d'onde.  
-Structure régulière, de période = **longueur d'onde dans le guide $\lambda_g$** (c'est une certaine périodicité que l'on observe, qui n'est pas la longueur d'onde habituelle)  
+Structure régulière, de période = **longueur d'onde dans le guide $\lambda_g$** (c'est une certaine périodicité que l'on observe, qui n'est pas la longueur d'onde habituelle), qu'on regarde entre deux peak sur l'image puisqu'elle représente l'amplitude (donc val abs)  
 
 ### Propagation entre deux plaques conductrices
 On prend un cas académique, qui (il faut le croire) est bien généralisé pour d'autres cas.
@@ -63,16 +63,19 @@ Même chose mais avec le champs magnétique:
 Donc trois modes: **TEM**, **TE**, et **TM**.  
 
 ![alt text](image-184.png)  
-On aura mathématiquement que deux ondes planes (avec $\bar{E_1}$, $\bar{\beta_1}$ et $\bar{E_2}$, $\bar{\beta_2}$, la 3 serait en fait la même que la 1).  
+On aura mathématiquement que deux ondes planes (avec $\bar{E_1}$, $\bar{\beta_1}$ et $\bar{E_2}$, $\bar{\beta_2}$, la 3 serait en fait la même que la 1). On a $-E_0$ pour $E_2$ car réflection parfaite de la plaque, coeff de reflection = -1, donc l'amplitude devient bien négative.  
 On a $\beta$ qui est connu ($\beta = \frac{\omega}{c}$).  
 
-> il a fait au tableau le calcul $\bar{\beta_1}.\bar{r}=\beta(-y\cos(\theta)+z\sin(\theta))$ comme $\bar{r}=$...  
+> 2024: il a fait au tableau le calcul $\bar{\beta_1}.\bar{r}=\beta(-y\cos(\theta)+z\sin(\theta))$ comme $\bar{r}=$...  
 
 Est-ce que je vais pouvoir injecter l'onde avec n'importe quel angle d'incidence $\theta$ ?  
+Pour la première plaque, on a bien $E_1+E_2=0$ donc condition respectée, on doit donc checker pour la deuxième:  
 ![alt text](image-185.png)  
 $n$ numérote les angles possibles.
 Il existe un infinité de solutions possibles, un infinité discrète.  
 $\Rightarrow$ **le mode $\mathrm{TE}_n$**  
+
+> On veut techniquement n'avoir qu'un seul mode (pratiquement impossible) pour éviter les échos des bits envoyés qui requierent qu'on attendent que tous ces échos soient finis avant d'envoyer le bit suivant donc transmission plus lente de données.  
 
 > Dès qu'on confine (par exemple ici les deux plaques) l'onde, on a alors une infinité discrète de solutions, plutôt qu'une infinité continue pour une onde libre (dans un espace libre). C'est mathématiquement bien expliqué.  
 
@@ -90,18 +93,18 @@ Modes qui ont une fréquence de coupure plus basse que $f$ ($f_{cn}<f$) vont don
 Combinaison linéaire de tous les modes possibles(càd qui ont un $f_{cn}$ plus basse que $f$) sera le signal.  
 
 ![alt text](image-189.png)  
-On peut voir les paquets d'ondes qui se propagent dans le guide d'onde (sur le troisième).  
+On peut voir les paquets d'ondes qui se propagent dans le guide d'onde (sur le troisième). Ils sont formés par la superposition des deux schémas juste au dessus.  
 On imagine un sinus dans le sens transversal (y) qui se propage dans l'axe z.  
 La **longueur d'onde dans le guide** $\lambda_{gn}$ ne vaut pas juste la longueur d'onde dans le vide, mais divisé par $\sin(\theta_n)$ (theta n qui est l'angle par lequel j'ai injecté l'onde).  
 
 ![alt text](image-190.png)  
-Donc si $f<f_{cn}$, $\beta_{gn}$ aura une partie imaginaire, donc l'$e^{-j\beta z \sin\theta_n}$ de $\bar{E}_n$ aura une partie réelle donc l'onde va s'atténuer.  
+Donc si $f<f_{cn}$, $\beta_{gn}$ aura une partie imaginaire, donc l'$e^{-j\beta z \sin\theta_n}$ de $\bar{E}_n$ aura une partie réelle donc l'onde va s'atténuer exponentiellement dans la structure.  
 
 ![alt text](image-191.png)  
 Le motif qu'elle forme (le troisième là) semble se déplacer plus vite que la vitesse de la lumière. C'est la **vitesse de phase $v_{\varphi n}$** = vitesse de "déplacement" du motif.  
 
 ![alt text](image-192.png)  
-**Vitesse de groupe $v_{gn}$** = vitesse de transfert des informations.  
+**Vitesse de groupe $v_{gn}$** = vitesse de transfert des informations. Pour faire facile, en gros on va géométriquement on projette sur l'axe z la vitesse de l'onde (dépend de l'angle donc du mode).  
 **Cette vitesse dépend du mode !** (c'est trivial)  
 Elle dépend aussi de la fréquence, car l'angle change (car besoin pour respecter les conditions aux limites), on a plus ou moins de rebonds etc.
 
@@ -116,3 +119,4 @@ On regarde la fréquence de coupure la plus basse (au dessus de TEM) et on peut 
 > le mode TEM est le mode de base (et utilisé seul en monomode) qu'on utilise dans toutes les lignes de transmissions et les guides. $0<f<f_{c1}$  
 
 
+> **2025: on "finit" ici car pas le temps de bien passer sur le reste du chapitre (on parcours juste vite le reste)**  

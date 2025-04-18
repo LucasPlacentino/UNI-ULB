@@ -1,5 +1,7 @@
 # PhysTel Cours 15 - 02/05/2024
 
+### **2025: on traverse très rapidement le reste du chapitre car pas de temps**
+
 ## Chap 9. Suite
 
 suite: slide 54  

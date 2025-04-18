@@ -1,5 +1,7 @@
 # PhysTel Cours 14 - 25/04/2024
 
+### **2025: on traverse très rapidement le reste du chapitre car pas de temps**
+
 ## Chap 9. Suite
 
 Hypothèse: **lignes de transmission homogènes** = elles gardent la même sections et la même distance entre elles tout leur long.  
