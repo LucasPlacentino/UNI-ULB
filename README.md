@@ -30,11 +30,14 @@ Personal university files, documents and projects.
   (Notes .md)  
 - ### <a href='BA3/ELEC-H305'><ins>↪️ Course : Circuits logiques et numériques</ins></a> - ELEC-H305  
   Also C programming language (.c files, etc)
-- ### <a href='https://github.com/DemonicTricycle/DemonicTricycle-ELECH309'><ins>↪️ Projet Intégré</ins></a> - ELEC-H309  
+- ### <a href='https://github.com/DemonicTricycle/DemonicTricycle-ELECH309'><ins>↪️ Project BA3: Projet Intégré</ins></a> - ELEC-H309  
   #### "Demonic Tricycle"
   > <i>and https://github.com/lucasplacentino/Project-ELECH309.X for some tests</i>
-- ### <a href="https://github.com/LucasPlacentino/UNI-ULB/tree/main/BA3/MECA-H301"><ins>↪️ Thermodynamique Appliquée/Systèmes énergétiques : principes de bases et technologies durables</ins></a> - MECA-H301  
+- ### <a href="https://github.com/LucasPlacentino/UNI-ULB/tree/main/BA3/MECA-H301"><ins>↪️ Course: Thermodynamique Appliquée/Systèmes énergétiques : principes de bases et technologies durables</ins></a> - MECA-H301  
   (Notes .md)  
-- ### <a href="https://github.com/LucasPlacentino/UNI-ULB/tree/main/BA3/MECA-H3001"><ins>↪️ Fluid Mechanics and Transfer Processes</ins></a> - MECA-H3001
+- ### <a href="https://github.com/LucasPlacentino/UNI-ULB/tree/main/BA3/MECA-H3001"><ins>↪️ Course: Fluid Mechanics and Transfer Processes</ins></a> - MECA-H3001
   (Notes .md)  
   
+## MA1
+- ### <a href='MA1/ELEC-H409%20Digital%20Architectures%20%26%20Design'><ins>↪️ Course : Digital Architectures & Design</ins></a> - ELEC-H409  
+  (Notes .md)
