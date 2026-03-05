@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\Debug\ex3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ex3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ex3.map</FILE>
+  <FILE>ex3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <setup><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>27</LINE></setup>
+  <loop><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>59</LINE></loop>
+  <sleep1s><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>36</LINE></sleep1s>
+  <subloop_sleep_big><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>44</LINE></subloop_sleep_big>
+  <subloop_sleep_med><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>46</LINE></subloop_sleep_med>
+  <subloop_sleep_small><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab1\ex1\ex3\main.asm</FILE><LINE>48</LINE></subloop_sleep_small>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{18226A42-8477-4023-8AD2-40C49DA407C9}") = "ex1", "ex1.asmproj", "{59B1D629-9DCC-43ED-A0FD-8AB0E4D622AB}"
+EndProject
+Project("{18226A42-8477-4023-8AD2-40C49DA407C9}") = "ex2", "..\ex2\ex2.asmproj", "{EEC2A40E-6BB9-4625-804F-6D5B02B6C774}"
+EndProject
+Project("{18226A42-8477-4023-8AD2-40C49DA407C9}") = "ex3", "ex3\ex3.asmproj", "{E1E665BC-627D-496A-8AD7-DF57B9EDA94B}"
+EndProject
+Project("{18226A42-8477-4023-8AD2-40C49DA407C9}") = "ex4", "ex4\ex4.asmproj", "{DAAA936F-46A7-4590-8E65-0A6344F1B97D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59B1D629-9DCC-43ED-A0FD-8AB0E4D622AB}.Debug|AVR.ActiveCfg = Debug|AVR
+		{59B1D629-9DCC-43ED-A0FD-8AB0E4D622AB}.Debug|AVR.Build.0 = Debug|AVR
+		{59B1D629-9DCC-43ED-A0FD-8AB0E4D622AB}.Release|AVR.ActiveCfg = Release|AVR
+		{59B1D629-9DCC-43ED-A0FD-8AB0E4D622AB}.Release|AVR.Build.0 = Release|AVR
+		{EEC2A40E-6BB9-4625-804F-6D5B02B6C774}.Debug|AVR.ActiveCfg = Debug|AVR
+		{EEC2A40E-6BB9-4625-804F-6D5B02B6C774}.Debug|AVR.Build.0 = Debug|AVR
+		{EEC2A40E-6BB9-4625-804F-6D5B02B6C774}.Release|AVR.ActiveCfg = Release|AVR
+		{EEC2A40E-6BB9-4625-804F-6D5B02B6C774}.Release|AVR.Build.0 = Release|AVR
+		{E1E665BC-627D-496A-8AD7-DF57B9EDA94B}.Debug|AVR.ActiveCfg = Debug|AVR
+		{E1E665BC-627D-496A-8AD7-DF57B9EDA94B}.Debug|AVR.Build.0 = Debug|AVR
+		{E1E665BC-627D-496A-8AD7-DF57B9EDA94B}.Release|AVR.ActiveCfg = Release|AVR
+		{E1E665BC-627D-496A-8AD7-DF57B9EDA94B}.Release|AVR.Build.0 = Release|AVR
+		{DAAA936F-46A7-4590-8E65-0A6344F1B97D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DAAA936F-46A7-4590-8E65-0A6344F1B97D}.Debug|AVR.Build.0 = Debug|AVR
+		{DAAA936F-46A7-4590-8E65-0A6344F1B97D}.Release|AVR.ActiveCfg = Release|AVR
+		{DAAA936F-46A7-4590-8E65-0A6344F1B97D}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
