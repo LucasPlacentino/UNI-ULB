@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\Debug\ex1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ex1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ex1.map</FILE>
+  <FILE>ex1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <setup><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>51</LINE></setup>
+  <ISR880Hz><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>120</LINE></ISR880Hz>
+  <loop><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>87</LINE></loop>
+  <pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>110</LINE></pressed>
+  <not_pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>105</LINE></not_pressed>
+  <end_pressed_br><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>115</LINE></end_pressed_br>
+  <end_isr_880><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>143</LINE></end_isr_880>
+  <test_setup><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>149</LINE></test_setup>
+  <test_timer><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>177</LINE></test_timer>
+  <timer0_OF_ISR><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>218</LINE></timer0_OF_ISR>
+  <sleep1s><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>257</LINE></sleep1s>
+  <subloop_sleep_big><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>265</LINE></subloop_sleep_big>
+  <subloop_sleep_med><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>267</LINE></subloop_sleep_med>
+  <subloop_sleep_small><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab2\ex1\main.asm</FILE><LINE>269</LINE></subloop_sleep_small>
+ </LABELS>
+</ASSEMBLER_INFO>
