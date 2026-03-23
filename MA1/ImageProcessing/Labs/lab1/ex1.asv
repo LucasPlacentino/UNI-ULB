@@ -1,0 +1,36 @@
+% Lab 1 ImageProc
+% 2026-03-23
+
+close all; clear all; clc;
+
+% intro
+
+% **** !!! submit all exercises 25/05/2026 23h59 final deadline !!! ****
+% for bonus +1 on project grade
+% !!! minimum of 10/20 on BOTH the project and the theory exam
+
+% project is 40% of grade... see project pdf
+% (oral defense: not with prof, but usually same day of theory exam)
+
+% 4 types of images: 
+%   - indexed images, 
+%   - greyscale images, 
+%   - RGB images,
+%   - binary/monochrome images
+
+% For a colour table with J entries, this matrix has a size of Jx3
+% for greyscale, same size as image size
+% double(0-1) or UINT8 values (0-255)
+
+% we can convert from indexed to rgb or greyscale (ind2RGB(), ind2gray() )
+
+% YUV color space (luminance so like greyscale, blue proj, red proj), good for compressing
+% for the human eye
+% HSV, HSL, LAB color space
+
+% ... 1D filtering, see doc or DSP course (0 padding, inverse the filt
+
+
+
+
+
