@@ -1,0 +1,60 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\Debug\task.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>task.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>task.map</FILE>
+  <FILE>task.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <setup><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>88</LINE></setup>
+  <ISR880Hz><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>360</LINE></ISR880Hz>
+  <loop><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>126</LINE></loop>
+  <kp_polling_1><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>226</LINE></kp_polling_1>
+  <LED2ON><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>146</LINE></LED2ON>
+  <LED2OFF><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>150</LINE></LED2OFF>
+  <LED3ON><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>153</LINE></LED3ON>
+  <LED3OFF><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>157</LINE></LED3OFF>
+  <BUZON><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>160</LINE></BUZON>
+  <BUZOFF><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>164</LINE></BUZOFF>
+  <other_btn_pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>169</LINE></other_btn_pressed>
+  <col1pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>269</LINE></col1pressed>
+  <col2pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>275</LINE></col2pressed>
+  <col3pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>280</LINE></col3pressed>
+  <col4pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>285</LINE></col4pressed>
+  <no_kp_pressed><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>262</LINE></no_kp_pressed>
+  <col1row1><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>292</LINE></col1row1>
+  <col1row2><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>299</LINE></col1row2>
+  <col1row3><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>306</LINE></col1row3>
+  <col1row4><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>309</LINE></col1row4>
+  <col2row1><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>314</LINE></col2row1>
+  <col2row2><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>321</LINE></col2row2>
+  <col2row3><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>324</LINE></col2row3>
+  <col2row4><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>327</LINE></col2row4>
+  <col3row1><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>332</LINE></col3row1>
+  <col3row2><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>335</LINE></col3row2>
+  <col3row3><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>338</LINE></col3row3>
+  <col3row4><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>341</LINE></col3row4>
+  <col4row1><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>346</LINE></col4row1>
+  <col4row2><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>349</LINE></col4row2>
+  <col4row3><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>352</LINE></col4row3>
+  <col4row4><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>355</LINE></col4row4>
+  <end_isr_880><FILE>C:\Users\lucasp\Desktop\Sensors & uSys\Labs\lab3\task\main.asm</FILE><LINE>383</LINE></end_isr_880>
+ </LABELS>
+</ASSEMBLER_INFO>
